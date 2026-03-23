@@ -1,0 +1,16 @@
+{
+  "author" : "",
+  "id" : "91819AB7-DBDF-44E6-A98E-2F1A8B23C12F",
+  "name" : "Text Caption",
+  "params" : [
+    {
+      "kind" : "color",
+      "name" : "Background Color"
+    },
+    {
+      "kind" : "slider",
+      "name" : "Background Outline Width"
+    }
+  ],
+  "perWord" : true
+}
