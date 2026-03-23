@@ -4,6 +4,10 @@
 
 <h1 align="center">Keyframeless Community</h1>
 
+<div align="center">
+	<img alt="License" src="https://img.shields.io/github/license/overpolish/keyframeless-community?color=ff5000" />
+</div>
+
 <br />
 
 <div align="center">
