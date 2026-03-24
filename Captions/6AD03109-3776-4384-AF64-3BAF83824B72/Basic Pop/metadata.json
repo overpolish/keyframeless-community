@@ -1,0 +1,16 @@
+{
+  "author" : "overpolish",
+  "id" : "6AD03109-3776-4384-AF64-3BAF83824B72",
+  "name" : "Basic Pop",
+  "params" : [
+    {
+      "kind" : "toggle",
+      "name" : "Build In"
+    },
+    {
+      "kind" : "toggle",
+      "name" : "Build Out"
+    }
+  ],
+  "perWord" : false
+}
