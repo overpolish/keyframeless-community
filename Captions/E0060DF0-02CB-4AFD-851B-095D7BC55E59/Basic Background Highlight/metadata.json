@@ -1,0 +1,17 @@
+{
+  "author" : "overpolish",
+  "id" : "E0060DF0-02CB-4AFD-851B-095D7BC55E59",
+  "name" : "Basic Background Highlight",
+  "params" : [
+    {
+      "kind" : "color",
+      "name" : "Highlight Background"
+    },
+    {
+      "kind" : "color",
+      "name" : "Highlight Color"
+    }
+  ],
+  "perWord" : true,
+  "perWordStartsAtZero" : true
+}
