@@ -1,0 +1,12 @@
+{
+  "author" : "overpolish",
+  "id" : "C9AECF94-C75C-4702-82DB-4D927B3E9581",
+  "name" : "Basic Word Highlight",
+  "params" : [
+    {
+      "kind" : "color",
+      "name" : "Highlight Color"
+    }
+  ],
+  "perWord" : true
+}
