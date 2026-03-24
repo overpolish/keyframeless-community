@@ -8,5 +8,6 @@
       "name" : "Highlight Color"
     }
   ],
-  "perWord" : true
+  "perWord" : true,
+  "perWordStartsAtZero" : false
 }
