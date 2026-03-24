@@ -9,5 +9,5 @@
     }
   ],
   "perWord" : true,
-  "perWordStartsAtZero" : false
+  "perWordStartsAtZero" : true
 }
