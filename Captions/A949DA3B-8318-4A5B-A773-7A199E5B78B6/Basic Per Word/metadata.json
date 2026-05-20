@@ -6,5 +6,6 @@
 
   ],
   "perWord" : true,
-  "perWordStartsAtZero" : false
+  "perWordStartsAtZero" : false,
+  "version" : 2
 }
