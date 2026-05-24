@@ -4,10 +4,11 @@
   "name" : "Basic Word Highlight",
   "params" : [
     {
-      "kind" : "color",
+      "kind" : "slider",
       "name" : "Highlight Color"
     }
   ],
   "perWord" : true,
-  "perWordStartsAtZero" : true
+  "perWordStartsAtZero" : true,
+  "version" : 2
 }
