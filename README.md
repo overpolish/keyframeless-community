@@ -18,8 +18,9 @@ Place for community templates, and other related files used by Keyframeless X an
 
 <div align="center">
   
-| 📂 Location | 🔨 Use                                              |
-|------------|--------------------------------------------------|
-| Captions   | Templates for caption creation in Keyframeless X |
+| 📂 Location | 🔨 Use                                           |
+|-------------|--------------------------------------------------|
+| Captions    | Templates for caption creation in `Keyframeless X - Steno` |
+| Shaders     | Code for `Shader • KF` plugin                      |
 
 </div>
