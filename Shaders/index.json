@@ -108,6 +108,23 @@
         "metadata.json",
         "preview.jpg"
       ],
+      "folder": "Gentle Gradient",
+      "metadata": {
+        "author": "overpolish",
+        "category": "generator",
+        "id": "CF0459F4-5FA8-42FB-885E-47DB65E40CD8",
+        "name": "Gentle Gradient",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "CF0459F4-5FA8-42FB-885E-47DB65E40CD8"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
       "folder": "Glitch",
       "metadata": {
         "author": "dyvoid",
