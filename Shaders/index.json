@@ -1,0 +1,260 @@
+{
+  "entries": [
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Aurora",
+      "metadata": {
+        "author": "overpolish",
+        "category": "generator",
+        "id": "927BA404-DB9E-4F56-B351-FB088BC2B2F4",
+        "name": "Aurora",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "927BA404-DB9E-4F56-B351-FB088BC2B2F4"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Dither",
+      "metadata": {
+        "author": "Paper Design",
+        "category": "generator",
+        "id": "0D9D690F-B3E7-47BE-9F5C-18506C94BCCA",
+        "name": "Dither",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "0D9D690F-B3E7-47BE-9F5C-18506C94BCCA"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Fluid",
+      "metadata": {
+        "author": "Paul Bakaus",
+        "category": "generator",
+        "id": "E1B79122-70F0-42F7-8FD1-C59DD259086A",
+        "name": "Fluid",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "E1B79122-70F0-42F7-8FD1-C59DD259086A"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Glitch",
+      "metadata": {
+        "author": "dyvoid",
+        "category": "filter",
+        "id": "54AE51FD-54EB-418F-8EBB-BC3164D2A68B",
+        "name": "Glitch",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "54AE51FD-54EB-418F-8EBB-BC3164D2A68B"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "God Rays",
+      "metadata": {
+        "author": "Paper Design",
+        "category": "generator",
+        "id": "A25D6F8B-8A78-4D85-8BB2-105B53FDB344",
+        "name": "God Rays",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "A25D6F8B-8A78-4D85-8BB2-105B53FDB344"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Grain",
+      "metadata": {
+        "author": "Paper Design",
+        "category": "generator",
+        "id": "5B4256CE-8079-49EE-AEB9-2FDD561183C2",
+        "name": "Grain",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "5B4256CE-8079-49EE-AEB9-2FDD561183C2"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Mesh",
+      "metadata": {
+        "author": "Paper Design",
+        "category": "generator",
+        "id": "FCB75F98-A82D-4F8A-9DA3-82551F919657",
+        "name": "Mesh",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "FCB75F98-A82D-4F8A-9DA3-82551F919657"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Metaballs",
+      "metadata": {
+        "author": "Paper Design",
+        "category": "generator",
+        "id": "66F25294-436C-46EC-B4D0-82457B9FB7FF",
+        "name": "Metaballs",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "66F25294-436C-46EC-B4D0-82457B9FB7FF"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Neon",
+      "metadata": {
+        "author": "Paul Bakaus",
+        "category": "generator",
+        "id": "7BD9457A-535C-4B9E-B897-4EC01BE41E26",
+        "name": "Neon",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "7BD9457A-535C-4B9E-B897-4EC01BE41E26"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Neuro",
+      "metadata": {
+        "author": "Paper Design",
+        "category": "generator",
+        "id": "31B4314C-0123-4358-90E2-FCEB66D7B7DC",
+        "name": "Neuro",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "31B4314C-0123-4358-90E2-FCEB66D7B7DC"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Silk",
+      "metadata": {
+        "author": "Paul Bakaus",
+        "category": "generator",
+        "id": "DBAC6FE4-77C3-4EFA-84A5-6F0670AC0962",
+        "name": "Silk",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "DBAC6FE4-77C3-4EFA-84A5-6F0670AC0962"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Silk Fabric",
+      "metadata": {
+        "author": "Giorgi Azmaipharashvili",
+        "category": "generator",
+        "id": "2451EEC1-1D3A-4FBA-BEAD-67C90460162D",
+        "name": "Silk Fabric",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "2451EEC1-1D3A-4FBA-BEAD-67C90460162D"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Simplex Noise",
+      "metadata": {
+        "author": "Paper Design",
+        "category": "generator",
+        "id": "AAD517C1-DF20-433C-B003-5D932CF3552A",
+        "name": "Simplex Noise",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "AAD517C1-DF20-433C-B003-5D932CF3552A"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Strata",
+      "metadata": {
+        "author": "Paul Bakaus",
+        "category": "generator",
+        "id": "0BCEE193-740A-4CFE-906F-39945F8B8357",
+        "name": "Strata",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "0BCEE193-740A-4CFE-906F-39945F8B8357"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
+      "folder": "Warp",
+      "metadata": {
+        "author": "Paper Design",
+        "category": "generator",
+        "id": "DEF887EA-1296-487A-99D5-EF8A6E09F628",
+        "name": "Warp",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "DEF887EA-1296-487A-99D5-EF8A6E09F628"
+    }
+  ],
+  "version": 1
+}

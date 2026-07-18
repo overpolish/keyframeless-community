@@ -1,0 +1,103 @@
+{
+  "entries": [
+    {
+      "files": [
+        "Basic Background Highlight.moti",
+        "large.png",
+        "metadata.json",
+        "preview.gif",
+        "small.png"
+      ],
+      "folder": "Basic Background Highlight",
+      "metadata": {
+        "author": "overpolish",
+        "id": "E0060DF0-02CB-4AFD-851B-095D7BC55E59",
+        "name": "Basic Background Highlight",
+        "params": [
+          {
+            "kind": "color",
+            "name": "Highlight Background"
+          },
+          {
+            "kind": "color",
+            "name": "Highlight Color"
+          }
+        ],
+        "perWord": true,
+        "perWordStartsAtZero": true
+      },
+      "uuid": "E0060DF0-02CB-4AFD-851B-095D7BC55E59"
+    },
+    {
+      "files": [
+        "Basic Per Word.moti",
+        "large.png",
+        "metadata.json",
+        "preview.gif",
+        "small.png"
+      ],
+      "folder": "Basic Per Word",
+      "metadata": {
+        "author": "overpolish",
+        "id": "A949DA3B-8318-4A5B-A773-7A199E5B78B6",
+        "name": "Basic Per Word",
+        "params": [],
+        "perWord": true,
+        "perWordStartsAtZero": false
+      },
+      "uuid": "A949DA3B-8318-4A5B-A773-7A199E5B78B6"
+    },
+    {
+      "files": [
+        "Basic Pop.moti",
+        "large.png",
+        "metadata.json",
+        "preview.gif",
+        "small.png"
+      ],
+      "folder": "Basic Pop",
+      "metadata": {
+        "author": "overpolish",
+        "id": "6AD03109-3776-4384-AF64-3BAF83824B72",
+        "name": "Basic Pop",
+        "params": [
+          {
+            "kind": "toggle",
+            "name": "Build In"
+          },
+          {
+            "kind": "toggle",
+            "name": "Build Out"
+          }
+        ],
+        "perWord": false
+      },
+      "uuid": "6AD03109-3776-4384-AF64-3BAF83824B72"
+    },
+    {
+      "files": [
+        "Basic Word Highlight.moti",
+        "large.png",
+        "metadata.json",
+        "preview.gif",
+        "small.png"
+      ],
+      "folder": "Basic Word Highlight",
+      "metadata": {
+        "author": "overpolish",
+        "id": "C9AECF94-C75C-4702-82DB-4D927B3E9581",
+        "name": "Basic Word Highlight",
+        "params": [
+          {
+            "kind": "color",
+            "name": "Highlight Color"
+          }
+        ],
+        "perWord": true,
+        "perWordStartsAtZero": true
+      },
+      "uuid": "C9AECF94-C75C-4702-82DB-4D927B3E9581"
+    }
+  ],
+  "version": 1
+}
