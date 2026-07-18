@@ -91,6 +91,23 @@
         "metadata.json",
         "preview.jpg"
       ],
+      "folder": "Fold",
+      "metadata": {
+        "author": "overpolish",
+        "category": "generator",
+        "id": "01CEE437-9B1A-4D4E-89A6-06E24C336638",
+        "name": "Fold",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "01CEE437-9B1A-4D4E-89A6-06E24C336638"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
       "folder": "Glitch",
       "metadata": {
         "author": "dyvoid",
