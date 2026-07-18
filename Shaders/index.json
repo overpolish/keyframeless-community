@@ -261,6 +261,23 @@
         "metadata.json",
         "preview.jpg"
       ],
+      "folder": "Grid Hills",
+      "metadata": {
+        "author": "overpolish",
+        "category": "generator",
+        "id": "17311014-839A-4931-9C2B-53AAFFA279AD",
+        "name": "Grid Hills",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "17311014-839A-4931-9C2B-53AAFFA279AD"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
       "folder": "Kaleidoscope",
       "metadata": {
         "author": "overpolish",
