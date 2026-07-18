@@ -23,6 +23,23 @@
         "metadata.json",
         "preview.jpg"
       ],
+      "folder": "Contour",
+      "metadata": {
+        "author": "overpolish",
+        "category": "generator",
+        "id": "73952EE8-1CDF-4D11-A384-D638CED230D4",
+        "name": "Contour",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "73952EE8-1CDF-4D11-A384-D638CED230D4"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
       "folder": "Currents",
       "metadata": {
         "author": "overpolish",
