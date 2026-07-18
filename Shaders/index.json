@@ -329,6 +329,23 @@
         "metadata.json",
         "preview.jpg"
       ],
+      "folder": "Tide",
+      "metadata": {
+        "author": "overpolish",
+        "category": "generator",
+        "id": "B544866B-EEC7-4354-B8BE-677123553632",
+        "name": "Tide",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "B544866B-EEC7-4354-B8BE-677123553632"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
       "folder": "Warp",
       "metadata": {
         "author": "Paper Design",
