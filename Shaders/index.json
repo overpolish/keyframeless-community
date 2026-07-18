@@ -193,6 +193,23 @@
         "metadata.json",
         "preview.jpg"
       ],
+      "folder": "Prisma",
+      "metadata": {
+        "author": "overpolish",
+        "category": "generator",
+        "id": "A4642616-FE9C-4E6D-BB45-578B9CE600F8",
+        "name": "Prisma",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "A4642616-FE9C-4E6D-BB45-578B9CE600F8"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
       "folder": "Silk",
       "metadata": {
         "author": "Paul Bakaus",
