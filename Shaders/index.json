@@ -210,6 +210,23 @@
         "metadata.json",
         "preview.jpg"
       ],
+      "folder": "Mosaic",
+      "metadata": {
+        "author": "overpolish",
+        "category": "filter",
+        "id": "1917A1D7-9F6B-4CD7-ABC0-F74DD40C068F",
+        "name": "Mosaic",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "1917A1D7-9F6B-4CD7-ABC0-F74DD40C068F"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
       "folder": "Neon",
       "metadata": {
         "author": "Paul Bakaus",
