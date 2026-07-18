@@ -176,6 +176,23 @@
         "metadata.json",
         "preview.jpg"
       ],
+      "folder": "Gradient Map",
+      "metadata": {
+        "author": "overpolish",
+        "category": "filter",
+        "id": "842C1B37-FB14-41C6-B3C1-F046589A794D",
+        "name": "Gradient Map",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "842C1B37-FB14-41C6-B3C1-F046589A794D"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
       "folder": "Grain",
       "metadata": {
         "author": "Paper Design",
