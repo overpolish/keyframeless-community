@@ -3,8 +3,9 @@ name: Generate manifest
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - "**/index.json"
+    paths:
+      - "Shaders/**"
+      - "Captions/**"
   workflow_dispatch:
 
 permissions:
