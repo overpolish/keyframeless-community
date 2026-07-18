@@ -193,6 +193,23 @@
         "metadata.json",
         "preview.jpg"
       ],
+      "folder": "Kaleidoscope",
+      "metadata": {
+        "author": "overpolish",
+        "category": "filter",
+        "id": "5E0978F6-E1B2-4C31-90A2-87029D81FC3D",
+        "name": "Kaleidoscope",
+        "preview": "preview.jpg",
+        "version": 1
+      },
+      "uuid": "5E0978F6-E1B2-4C31-90A2-87029D81FC3D"
+    },
+    {
+      "files": [
+        "image.glsl",
+        "metadata.json",
+        "preview.jpg"
+      ],
       "folder": "Mesh",
       "metadata": {
         "author": "Paper Design",
