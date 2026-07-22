@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 // Metaballs - derived from the metaballs shader in paper-design/shaders
-// (https://github.com/paper-design/shaders). Translated to GLSL for Shader and
+// (https://github.com/paper-design/shaders). Translated to GLSL for Mirage and
 // adapted for its directive controls. Coloured gooey balls roam on smooth noise
 // paths and merge into organic blobs over a background.
 

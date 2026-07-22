@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 // God Rays - derived from the god-rays shader in paper-design/shaders
-// (https://github.com/paper-design/shaders). Translated to GLSL for Shader and
+// (https://github.com/paper-design/shaders). Translated to GLSL for Mirage and
 // adapted for its directive controls. Rays of light radiate from the centre,
 // blended through up to 5 ray colours over a background, with a central glow
 // and a bloom overlay.

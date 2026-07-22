@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 // Dithering - derived from the dithering shader in paper-design/shaders
-// (https://github.com/paper-design/shaders). Translated to GLSL for Shader and
+// (https://github.com/paper-design/shaders). Translated to GLSL for Mirage and
 // adapted for its directive controls. A procedural field rendered through a
 // random or ordered-Bayer dither into a colour palette. Computed in a fixed
 // 1080-tall reference frame so the dither cell size is resolution-independent.

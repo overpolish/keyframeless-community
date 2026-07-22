@@ -3,7 +3,7 @@
 //
 // Silk - derived from the "Silk Cascade" shader in pbakaus/radiant
 // (https://github.com/pbakaus/radiant, radiant-shaders.com). Translated to GLSL
-// for Shader and adapted for its directive controls. Three domain-warped fabric
+// for Mirage and adapted for its directive controls. Three domain-warped fabric
 // layers with Kajiya-Kay anisotropic sheen, lit and composited back-to-front.
 
 // #color label="Colours" min=1 max=3 default=3

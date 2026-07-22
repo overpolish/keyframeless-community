@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 // Grain Gradient - derived from the grain-gradient shader in paper-design/shaders
-// (https://github.com/paper-design/shaders). Translated to GLSL for Shader and
+// (https://github.com/paper-design/shaders). Translated to GLSL for Mirage and
 // adapted for its directive controls. A procedural shape indexes a colour ramp,
 // warped by fbm noise with a grainy overlay, composited over a background.
 

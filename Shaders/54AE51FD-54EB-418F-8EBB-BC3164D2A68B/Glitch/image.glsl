@@ -5,7 +5,7 @@
 // tearing, chroma (RGB) shift, scanlines and static over the source clip.
 // The snoise() function is Ashima Arts' 2D simplex noise (webgl-noise, MIT).
 // Effect credit: <add the source you took the glitch effect from>.
-// Adapted to GLSL directive controls for Shader; samples iChannel0 = source.
+// Adapted to GLSL directive controls for Mirage; samples iChannel0 = source.
 
 // #percent label="Amount" default=100
 uniform float uAmount;

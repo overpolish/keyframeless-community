@@ -3,7 +3,7 @@
 //
 // Neuro Noise - derived from the neuro-noise shader in paper-design/shaders
 // (https://github.com/paper-design/shaders; original algorithm by zozuar).
-// Translated to GLSL for Shader and adapted for its directive controls.
+// Translated to GLSL for Mirage and adapted for its directive controls.
 // A glowing web of accumulated rotated sine layers, coloured by intensity.
 
 // #color label="Colours" min=2 max=5 default="#06080F,#1B4A6B,#57E0FF"

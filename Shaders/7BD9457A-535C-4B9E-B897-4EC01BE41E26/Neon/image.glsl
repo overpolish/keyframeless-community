@@ -4,7 +4,7 @@
 // Neon - derived from "Neon Drip" in radiant-shaders (github.com/pbakaus/radiant),
 // reduced to just the glowing tendril wisps (the source's metaball blobs are
 // dropped) and retuned so the strands read as tangled neon filaments rather than
-// rising flames. Translated to GLSL for Shader and adapted for its directive
+// rising flames. Translated to GLSL for Mirage and adapted for its directive
 // controls. The wisp field is layered through a 4-stop HDR ramp from the palette
 // and ACES tone-mapped over a dark backdrop.
 

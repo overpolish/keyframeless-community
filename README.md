@@ -21,6 +21,6 @@ Place for community templates, and other related files used by Keyframeless X an
 | 📂 Location | 🔨 Use                                           |
 |-------------|--------------------------------------------------|
 | Captions    | Templates for caption creation in `Keyframeless X - Steno` |
-| Shaders     | Code for `Shader • KF` plugin                      |
+| Shaders     | Code for `Mirage • KF` plugin                      |
 
 </div>

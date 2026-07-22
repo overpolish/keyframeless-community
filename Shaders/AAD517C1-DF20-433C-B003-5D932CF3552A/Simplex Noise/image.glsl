@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 // Simplex Noise - derived from the simplex-noise shader in paper-design/shaders
-// (https://github.com/paper-design/shaders). Translated to GLSL for Shader and
+// (https://github.com/paper-design/shaders). Translated to GLSL for Mirage and
 // adapted for its directive controls. A palette mapped through two layered
 // simplex noises, then quantised into soft bands.
 

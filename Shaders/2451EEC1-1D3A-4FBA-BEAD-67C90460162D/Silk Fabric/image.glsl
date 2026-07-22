@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 //
 // Satin - derived from a silk-fabric shader by Giorgi Azmaipharashvili.
-// Translated to GLSL for Shader and adapted for its directive controls: the
+// Translated to GLSL for Mirage and adapted for its directive controls: the
 // monochrome original is recoloured through a two-tone palette, and the weave,
 // sheen and surface ripple are exposed as controls. The mouse interaction is
 // dropped (no pointer in the FxPlug render).

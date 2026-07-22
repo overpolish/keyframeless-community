@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 //
 // Fluid - derived from "Fluid Amber" in radiant-shaders
-// (github.com/pbakaus/radiant). Translated to GLSL for Shader and adapted for its
+// (github.com/pbakaus/radiant). Translated to GLSL for Mirage and adapted for its
 // directive controls. An iterative IQ domain warp (fbm feeding fbm feeding fbm)
 // whose field magnitudes composite the palette swatches in layers for a molten,
 // marbled flow. Time enters as the 3rd noise dimension, so the field boils in

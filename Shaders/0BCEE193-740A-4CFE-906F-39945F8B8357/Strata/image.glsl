@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 //
 // Strata - derived from "Painted Strata" in radiant-shaders
-// (github.com/pbakaus/radiant). Translated to GLSL for Shader and adapted for its
+// (github.com/pbakaus/radiant). Translated to GLSL for Mirage and adapted for its
 // directive controls. Stacked geological strata with folded boundaries, a
 // tectonic domain warp, per-layer palette colour and washi-paper grain. Each
 // layer hashes to a palette swatch.
