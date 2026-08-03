@@ -13,10 +13,26 @@ produces a diff when the catalog actually changed.
 
 import json
 import os
+import re
 import sys
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MANIFEST_NAME = "index.json"
+COLOR_SURFACE_DIRECTIVE = re.compile(
+    r"^\s*//\s*#color-surface(?:\s|$)", re.MULTILINE
+)
+
+
+def shader_is_grading_tool(entry_dir: str, metadata: dict) -> bool:
+    """Whether a shader belongs in Mirage's grading filter."""
+    if metadata.get("category") == "color-transform":
+        return True
+    image_path = os.path.join(entry_dir, "image.glsl")
+    try:
+        with open(image_path, "r", encoding="utf-8") as f:
+            return COLOR_SURFACE_DIRECTIVE.search(f.read()) is not None
+    except OSError:
+        return False
 
 
 def is_catalog(name: str) -> bool:
@@ -47,6 +63,12 @@ def build_entry(catalog: str, uuid: str):
         return None
     if not isinstance(metadata, dict) or "name" not in metadata:
         return None
+
+    # Remote Mirage cards only have the manifest until they are downloaded.
+    # Publish this source-derived capability alongside the authored metadata so
+    # the Colour filter is correct before image.glsl exists locally.
+    if catalog == "Shaders":
+        metadata["grading"] = shader_is_grading_tool(entry_dir, metadata)
 
     files = sorted(
         f for f in os.listdir(entry_dir) if os.path.isfile(os.path.join(entry_dir, f))
