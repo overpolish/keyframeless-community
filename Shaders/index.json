@@ -10,6 +10,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "AD132929-A1B9-4A76-95CB-61501C79EAE8",
         "name": "Aurora",
         "preview": "preview.jpg",
@@ -27,6 +28,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "5148E5CA-5B31-4F19-BB6D-4FC4ABAECBC8",
         "name": "Bars",
         "preview": "preview.jpg",
@@ -44,6 +46,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "F60ADBEA-70AE-4637-A981-D4443D601721",
         "name": "Bloom",
         "preview": "preview.jpg",
@@ -61,6 +64,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": true,
         "id": "A537CF1F-3EAE-446C-BD7F-E0CF7968368A",
         "name": "Bloom Mist",
         "preview": "preview.jpg",
@@ -78,6 +82,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "089DF5CF-3460-4367-85F5-9E6846150037",
         "name": "Blur",
         "preview": "preview.jpg",
@@ -95,6 +100,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "transition",
+        "grading": false,
         "id": "DC5863E9-3DE6-4BB5-BEDD-08C397C10576",
         "name": "Burn",
         "preview": "preview.jpg",
@@ -112,6 +118,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "transition",
+        "grading": false,
         "id": "80EC1D8D-EE1A-4BC1-9E88-6371CDB6EBE0",
         "name": "Camera Iris",
         "preview": "preview.jpg",
@@ -129,6 +136,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "transition",
+        "grading": false,
         "id": "C707985D-5139-4014-8795-AD03D8E5BC78",
         "name": "Card Flip",
         "preview": "preview.jpg",
@@ -146,6 +154,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "layout",
+        "grading": false,
         "id": "CCD1F645-CE06-4FDE-A572-EB1A9980CAC1",
         "name": "Cards",
         "preview": "preview.jpg",
@@ -163,6 +172,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": true,
         "id": "95F59E32-38D4-4A0F-A269-2CD05A4215C8",
         "name": "Chroma",
         "preview": "preview.jpg",
@@ -180,6 +190,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "74B51F2F-2CC1-4693-AD3C-0D79E2F3A16C",
         "name": "Circular Spectrum",
         "preview": "preview.jpg",
@@ -197,6 +208,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "E42E1561-42BF-4615-91A7-8A5509D2DE20",
         "name": "Concentric Ripple",
         "preview": "preview.jpg",
@@ -214,6 +226,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "A2836FBC-0B3C-466E-8A6C-DDD201354201",
         "name": "Contour",
         "preview": "preview.jpg",
@@ -231,6 +244,7 @@
       "metadata": {
         "author": "Eke Péter",
         "category": "transition",
+        "grading": false,
         "id": "81DE6AC3-B441-4291-BA7B-413EB6AF5CDF",
         "name": "Crosswarp",
         "preview": "preview.jpg",
@@ -248,6 +262,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "C5079535-B4A5-4BD4-9AB4-F0FE31D86632",
         "name": "CRT",
         "preview": "preview.jpg",
@@ -265,6 +280,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "DCB85DCD-29D5-4601-A113-595F414C2FFE",
         "name": "Currents",
         "preview": "preview.jpg",
@@ -282,6 +298,7 @@
       "metadata": {
         "author": "Sergey Kosarevsky",
         "category": "transition",
+        "grading": false,
         "id": "6593B040-DAB3-40EB-9C70-E410813B993A",
         "name": "Defocus Blur",
         "preview": "preview.jpg",
@@ -299,6 +316,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "73E2BCC9-0F65-40E0-B3E1-57E240057A66",
         "name": "Denoise",
         "preview": "preview.jpg",
@@ -316,6 +334,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "transition",
+        "grading": false,
         "id": "FD85E2BD-7DA8-4648-95D9-0B134244C17D",
         "name": "Depth Push",
         "preview": "preview.jpg",
@@ -333,6 +352,7 @@
       "metadata": {
         "author": "hjm1fb",
         "category": "transition",
+        "grading": false,
         "id": "ADB2A824-A06F-4A7A-8453-66877B6AF139",
         "name": "Dissolve",
         "preview": "preview.jpg",
@@ -350,6 +370,7 @@
       "metadata": {
         "author": "Paper Design",
         "category": "generator",
+        "grading": false,
         "id": "36DB0D0A-185D-42BB-804B-A424EA810FD7",
         "name": "Dither",
         "preview": "preview.jpg",
@@ -367,6 +388,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "B88399BC-3CA7-4735-84B5-EE7B56EF258E",
         "name": "Dither",
         "preview": "preview.jpg",
@@ -384,6 +406,7 @@
       "metadata": {
         "author": "Zeh Fernando",
         "category": "transition",
+        "grading": false,
         "id": "42C5B235-F4C4-4112-902C-9277296D3A52",
         "name": "Doom Screen",
         "preview": "preview.jpg",
@@ -401,6 +424,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "C53DAD5A-0D50-4511-A859-39C1150B739A",
         "name": "Dynamic Grid",
         "preview": "preview.jpg",
@@ -418,6 +442,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "11A0BC89-2B15-4A61-943A-3DF5B5A29242",
         "name": "Edge",
         "preview": "preview.jpg",
@@ -435,6 +460,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": true,
         "id": "78FC60F4-116B-423A-9283-6DDA04873605",
         "name": "Film Halation",
         "preview": "preview.jpg",
@@ -452,6 +478,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": true,
         "id": "91CF8E15-C46A-4C45-8750-3378820F5DFD",
         "name": "Filmic",
         "preview": "preview.jpg",
@@ -469,6 +496,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "CB083A35-9172-4771-AA2A-04A703366946",
         "name": "Fisheye/Pinch",
         "preview": "preview.jpg",
@@ -486,6 +514,7 @@
       "metadata": {
         "author": "Paul Bakaus",
         "category": "generator",
+        "grading": false,
         "id": "97463111-B191-4865-8B7A-F087DD0E58EE",
         "name": "Fluid",
         "preview": "preview.jpg",
@@ -503,6 +532,7 @@
       "metadata": {
         "author": "gre",
         "category": "transition",
+        "grading": false,
         "id": "BBEAA8DF-DAF4-4EC2-8F70-617BF406B29F",
         "name": "Flyeye",
         "preview": "preview.jpg",
@@ -520,6 +550,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "FF13AD6A-1726-4B9A-B10C-A016AA5274FB",
         "name": "Gentle Gradient",
         "preview": "preview.jpg",
@@ -537,6 +568,7 @@
       "metadata": {
         "author": "Ashima Arts / Ian McEwan / stegu",
         "category": "filter",
+        "grading": false,
         "id": "92C6CE67-432E-4CD6-A8AC-D471810C7651",
         "name": "Glitch",
         "preview": "preview.jpg",
@@ -554,6 +586,7 @@
       "metadata": {
         "author": "Paper Design",
         "category": "generator",
+        "grading": false,
         "id": "5A0D8409-3F61-45D7-B12B-F516D7930440",
         "name": "God Rays",
         "preview": "preview.jpg",
@@ -571,6 +604,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": true,
         "id": "45D74BCA-3979-4F23-9573-D15881BA5805",
         "name": "Grade",
         "preview": "preview.jpg",
@@ -588,6 +622,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "3DAA84CE-160E-452B-AE18-06B7629375AA",
         "name": "Gradient Map",
         "preview": "preview.jpg",
@@ -605,6 +640,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "483CC1A5-2688-431F-BD1C-E6697212A7DB",
         "name": "Graduated",
         "preview": "preview.jpg",
@@ -622,6 +658,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "layout",
+        "grading": false,
         "id": "5317162C-6EF0-44DE-93DB-7B5C2CD9C445",
         "name": "Grid",
         "preview": "preview.jpg",
@@ -639,6 +676,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "2BD195EC-A9A3-433D-82E4-4817C70B36B8",
         "name": "Grid Hills",
         "preview": "preview.jpg",
@@ -656,6 +694,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "6AE8A99A-3272-458F-B675-CD522916DCF1",
         "name": "Grid Lines",
         "preview": "preview.jpg",
@@ -673,6 +712,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "layout",
+        "grading": false,
         "id": "61EDC1AD-F180-442F-AD4B-8EA798CC7DA6",
         "name": "Hero",
         "preview": "preview.jpg",
@@ -690,6 +730,7 @@
       "metadata": {
         "author": "nwoeanhinnogaehr",
         "category": "transition",
+        "grading": false,
         "id": "E8844767-9742-4158-875E-A871DA7B29A3",
         "name": "HSV Fade",
         "preview": "preview.jpg",
@@ -707,6 +748,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "transition",
+        "grading": false,
         "id": "36A46456-DFBE-4FB0-ADCE-7CDDA9019038",
         "name": "Impact Cut",
         "preview": "preview.jpg",
@@ -724,6 +766,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "BED4B7B8-9F2D-4FE8-BAC4-BE6F327D5139",
         "name": "Infrared",
         "preview": "preview.jpg",
@@ -741,6 +784,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "9416CF84-DBE6-4BF7-9EE9-8D697AB9564A",
         "name": "Kaleidoscope",
         "preview": "preview.jpg",
@@ -758,6 +802,7 @@
       "metadata": {
         "author": "Giorgi Azmaipharashvili",
         "category": "generator",
+        "grading": false,
         "id": "48398E9B-2672-4FE6-8582-3BF77F779E8E",
         "name": "Kevlar",
         "preview": "preview.jpg",
@@ -775,6 +820,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "transition",
+        "grading": false,
         "id": "049B523F-6259-49F0-AA2E-CBD4807A55C4",
         "name": "Liquid Displacement",
         "preview": "preview.jpg",
@@ -792,6 +838,7 @@
       "metadata": {
         "author": "mernking (GitLab: Godswork)",
         "category": "transition",
+        "grading": false,
         "id": "3539B0B0-A56D-4044-B1D5-1F1FEEB2F12A",
         "name": "Lost Signal",
         "preview": "preview.jpg",
@@ -809,6 +856,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "transition",
+        "grading": false,
         "id": "5298AD56-93AB-4E81-850D-EF2D04898619",
         "name": "Luma Wipe",
         "preview": "preview.jpg",
@@ -826,6 +874,7 @@
       "metadata": {
         "author": "Paper Design",
         "category": "generator",
+        "grading": false,
         "id": "E0E21F35-CC10-4694-BB38-C4C4ABA7A6B6",
         "name": "Mesh",
         "preview": "preview.jpg",
@@ -843,6 +892,7 @@
       "metadata": {
         "author": "Paper Design",
         "category": "generator",
+        "grading": false,
         "id": "A1F21927-29B5-47CD-ADCF-AAD26E22F9BF",
         "name": "Metaballs",
         "preview": "preview.jpg",
@@ -860,6 +910,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "75E6C707-D63F-4380-9318-7670236EA69C",
         "name": "Mosaic",
         "preview": "preview.jpg",
@@ -877,6 +928,7 @@
       "metadata": {
         "author": "Paul Bakaus",
         "category": "generator",
+        "grading": false,
         "id": "3780D1F0-B097-468F-90F9-591E67A00B6F",
         "name": "Neon",
         "preview": "preview.jpg",
@@ -894,6 +946,7 @@
       "metadata": {
         "author": "Paper Design",
         "category": "generator",
+        "grading": false,
         "id": "7A77DDF6-F88C-4576-AB5F-C8903EE89A99",
         "name": "Neuro",
         "preview": "preview.jpg",
@@ -911,6 +964,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "EE6C4494-FE21-4180-8A21-A769C4D39E0C",
         "name": "Noise",
         "preview": "preview.jpg",
@@ -928,6 +982,7 @@
       "metadata": {
         "author": "martiniti",
         "category": "transition",
+        "grading": false,
         "id": "73D6AE25-7FE6-4FA8-BC6F-62DFDA0E2C5B",
         "name": "Open/Close",
         "preview": "preview.jpg",
@@ -945,6 +1000,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "B5011CDE-D748-4F56-A46A-BF2808CF890C",
         "name": "Oscilloscope",
         "preview": "preview.jpg",
@@ -962,6 +1018,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "92E92125-D222-45AD-9748-448485BDEC4E",
         "name": "Paint Mixer",
         "preview": "preview.jpg",
@@ -979,6 +1036,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "21992390-9890-4AC4-A75C-E9AC39A5CFE6",
         "name": "Paper",
         "preview": "preview.jpg",
@@ -996,6 +1054,7 @@
       "metadata": {
         "author": "Yoni Maltsman (@friendlyspinach)",
         "category": "transition",
+        "grading": false,
         "id": "A8983A67-7049-4238-A066-A94DE23075E1",
         "name": "Parametric Glitch",
         "preview": "preview.jpg",
@@ -1014,6 +1073,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "343AB4E7-5417-4C45-9122-0A714292102C",
         "name": "Particle Trails",
         "preview": "preview.jpg",
@@ -1031,6 +1091,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "72F59F65-7924-48C5-94A2-DCE6BB841BCC",
         "name": "Particles",
         "preview": "preview.jpg",
@@ -1048,6 +1109,7 @@
       "metadata": {
         "author": "Rich Harris",
         "category": "transition",
+        "grading": false,
         "id": "2F4F96AE-41A4-42FA-8228-1DF9C8A36C54",
         "name": "Perlin",
         "preview": "preview.jpg",
@@ -1065,6 +1127,7 @@
       "metadata": {
         "author": "Paper Design",
         "category": "generator",
+        "grading": false,
         "id": "C8A4C623-AD09-4147-877E-848BD3EAE6BB",
         "name": "Poison",
         "preview": "preview.jpg",
@@ -1082,6 +1145,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "84206BE8-91FE-4228-9CAA-F5F38FA1E5B9",
         "name": "Premonition",
         "preview": "preview.jpg",
@@ -1099,6 +1163,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "A8F9B449-C45C-45EF-8375-E51591F3F2B6",
         "name": "Print Halftone",
         "preview": "preview.jpg",
@@ -1116,6 +1181,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "B0303202-0167-4181-B184-C6E69A6E9545",
         "name": "Prism",
         "preview": "preview.jpg",
@@ -1133,6 +1199,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "A6EB960C-24AB-427A-AA2F-BF9A8F3AE992",
         "name": "Prisma",
         "preview": "preview.jpg",
@@ -1150,6 +1217,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "A879DB6E-BDA7-4B93-82A1-C309FC79E565",
         "name": "Pump",
         "preview": "preview.jpg",
@@ -1167,6 +1235,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": true,
         "id": "D4829727-6DA7-43BD-A30C-7B77E427B9C2",
         "name": "Qualifier",
         "preview": "preview.jpg",
@@ -1184,6 +1253,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "layout",
+        "grading": false,
         "id": "3AB41D8F-A45E-4731-A130-45D9469467C5",
         "name": "Radial",
         "preview": "preview.jpg",
@@ -1201,6 +1271,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": true,
         "id": "D49CF322-56F6-46B9-ACE6-F959C7DC531F",
         "name": "Ranges",
         "preview": "preview.jpg",
@@ -1218,6 +1289,7 @@
       "metadata": {
         "author": "bread",
         "category": "transition",
+        "grading": false,
         "id": "9A590F0E-E203-4B70-B10D-CC80D68B9F85",
         "name": "Revolve",
         "preview": "preview.jpg",
@@ -1235,6 +1307,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "generator",
+        "grading": false,
         "id": "275E499E-D040-40B3-A921-0351C3AE6C06",
         "name": "Ribbons",
         "preview": "preview.jpg",
@@ -1252,6 +1325,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "228C6723-74C2-453F-AE4C-67B8A4B5988C",
         "name": "Ripple",
         "preview": "preview.jpg",
@@ -1269,6 +1343,7 @@
       "metadata": {
         "author": "chenkai",
         "category": "transition",
+        "grading": false,
         "id": "C30FC3EE-442C-4441-B398-CC165945BA57",
         "name": "Rotate",
         "preview": "preview.jpg",
@@ -1286,6 +1361,7 @@
       "metadata": {
         "author": "Paper Design",
         "category": "generator",
+        "grading": false,
         "id": "F80D8F12-B04F-4920-A2B6-2C3511261EDF",
         "name": "Sand",
         "preview": "preview.jpg",
@@ -1303,6 +1379,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "layout",
+        "grading": false,
         "id": "BB5AE069-5D9D-4BF6-A2DD-083FCD7A71C2",
         "name": "Scrolling",
         "preview": "preview.jpg",
@@ -1323,6 +1400,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": true,
         "id": "23B565B6-13F3-4866-903B-29B6CC711204",
         "name": "Selective",
         "preview": "preview.jpg",
@@ -1340,6 +1418,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "transition",
+        "grading": false,
         "id": "D14743F8-128E-4483-A347-FD43F0B81D28",
         "name": "Shape Wipe",
         "preview": "preview.jpg",
@@ -1357,6 +1436,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "64C16F8C-AFA2-4440-ABDF-949F68B7F31F",
         "name": "Sharpen",
         "preview": "preview.jpg",
@@ -1374,6 +1454,7 @@
       "metadata": {
         "author": "Paul Bakaus",
         "category": "generator",
+        "grading": false,
         "id": "2190188A-3174-4570-90F4-A57A366159F5",
         "name": "Silk",
         "preview": "preview.jpg",
@@ -1391,6 +1472,7 @@
       "metadata": {
         "author": "Paper Design",
         "category": "generator",
+        "grading": false,
         "id": "82D78C3A-5214-4E69-8C10-FEB623CCCAC2",
         "name": "Simplex Noise",
         "preview": "preview.jpg",
@@ -1408,6 +1490,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "layout",
+        "grading": false,
         "id": "F82420C7-C99E-450C-B99B-8AED63476E2E",
         "name": "Split",
         "preview": "preview.jpg",
@@ -1425,6 +1508,7 @@
       "metadata": {
         "author": "Paul Bakaus",
         "category": "generator",
+        "grading": false,
         "id": "17268272-7FA2-46A1-9245-C518765E2534",
         "name": "Strata",
         "preview": "preview.jpg",
@@ -1442,6 +1526,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": true,
         "id": "A9FD3161-F043-4687-BB49-6BA100922BBF",
         "name": "Tone",
         "preview": "preview.jpg",
@@ -1459,6 +1544,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "layout",
+        "grading": false,
         "id": "29E0D17C-3414-4FE9-A67D-B0E036C0FF4F",
         "name": "Triple Split",
         "preview": "preview.jpg",
@@ -1476,6 +1562,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "filter",
+        "grading": false,
         "id": "D29C5528-FF9C-459B-AEC5-39FA1D661D90",
         "name": "Vignette",
         "preview": "preview.jpg",
@@ -1493,6 +1580,7 @@
       "metadata": {
         "author": "overpolish",
         "category": "transition",
+        "grading": false,
         "id": "3B6946AD-A496-4ECB-B08A-6FAD615624FF",
         "name": "Whip Pan",
         "preview": "preview.jpg",
@@ -1510,6 +1598,7 @@
       "metadata": {
         "author": "Tianshuo",
         "category": "transition",
+        "grading": false,
         "id": "FBA00211-1CDA-4203-8BF3-8E6A1BFDF346",
         "name": "Zoom In/Out",
         "preview": "preview.jpg",
