@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 // #template generator
+// #alpha
 
 // #motionblur off
 
@@ -76,5 +77,6 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	vec3 color = uColor.rgb * brightness;
 	float alpha = clamp(brightness * uColor.a, 0.0, 1.0);
 
-	fragColor = vec4(color, alpha);
+	vec3 straightColor = alpha > 0.0001 ? color / alpha : color;
+	fragColor = vec4(straightColor, alpha);
 }

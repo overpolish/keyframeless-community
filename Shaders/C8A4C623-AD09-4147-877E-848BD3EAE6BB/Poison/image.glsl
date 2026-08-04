@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // #template generator
+// #alpha
 //
 // Derived from https://github.com/paper-design/shaders
 

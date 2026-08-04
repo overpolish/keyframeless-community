@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #int label="Segments" group={"Kaleidoscope", "camera.aperture"} min=2 max=24 default=6
 uniform float uSegments;
 
@@ -41,7 +42,7 @@ vec2 applyEdges(vec2 position)
 	return mirrorRepeat(position);
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec2 center = uCenter / iResolution.xy;
@@ -67,4 +68,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	    );
 
 	fragColor = texture(iChannel0, applyEdges(samplePosition));
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

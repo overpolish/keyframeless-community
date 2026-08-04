@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #audio label="Audio" flow flowlo=0 flowhi=63 flowgate=-50
 uniform vec4 uAudio[16];
 
@@ -42,7 +43,7 @@ vec2 hash21(float value)
 	return vec2(hash11(value), hash11(value + 37.7));
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 resolution = iResolution.xy;
 	vec2 uv = fragCoord / resolution;
@@ -97,7 +98,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	sampleOffset *= uStrength * 0.0015;
 
 	vec2 samplePosition = clamp(uv + sampleOffset, 0.0, 1.0);
-	vec3 color = texture(iChannel0, samplePosition).rgb;
+	vec4 source = texture(iChannel0, samplePosition);
+	vec3 color = source.rgb;
 
 	vec3 normal = normalize(vec3(-surfaceSlope * 0.12, 1.0));
 	vec3 lightDirection = normalize(vec3(-0.45, 0.55, 1.0));
@@ -114,5 +116,17 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	color *= lighting;
 
-	fragColor = vec4(color, 1.0);
+	fragColor = vec4(color, source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

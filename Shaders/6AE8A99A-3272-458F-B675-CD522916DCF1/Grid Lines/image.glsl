@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #int label="Lines" group={"Grid", "grid"} min=8 max=512 slidermax=128 default=60
 uniform float uLines;
 
@@ -46,10 +47,10 @@ float lineMask(float distance)
 	       );
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
-	vec3 source = texture(iChannel0, uv).rgb;
+	vec4 source = texture(iChannel0, uv);
 
 	float lineCount = max(float(uLines), 1.0);
 	float aspect = iResolution.x / iResolution.y;
@@ -91,9 +92,22 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	line *= uLine.a;
 
-	vec3 background = source * uFootage;
+	vec3 background = source.rgb * uFootage;
 
 	vec3 color = mix(background, uLine.rgb, line);
+	float alpha = line + source.a * uFootage * (1.0 - line);
 
-	fragColor = vec4(color, 1.0);
+	fragColor = vec4(color, alpha);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

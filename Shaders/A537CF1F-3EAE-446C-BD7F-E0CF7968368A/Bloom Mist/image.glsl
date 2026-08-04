@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #color-surface ring=light xaxis="Cool,Warm" yaxis="Clean,Glow"
 
 // #choice label="Quality" group={"Bloom", "sparkles"} options="Draft,Standard,High" default=1
@@ -75,7 +76,7 @@ vec3 temperedTint(vec3 tint, float warmCool)
 	return tempered * (dot(tint, LUMA) / max(dot(tempered, LUMA), 0.0001));
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -126,4 +127,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	color += tintedBloom * (uBloom * 1.4 + uMist * 0.3);
 
 	fragColor = vec4(mix(source.rgb, color, uMix), source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

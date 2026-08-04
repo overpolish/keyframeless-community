@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #color-surface ring=hue
 
 // Click a colour in the picture, then drag it somewhere else.
@@ -116,7 +117,7 @@ uniform float uMix;
 
 const vec3 LUMA = vec3(0.2126, 0.7152, 0.0722);
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -173,4 +174,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec3 graded = encodeFromLinear(oklabToLinear(lab));
 	fragColor = vec4(mix(source.rgb, graded, uMix), source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

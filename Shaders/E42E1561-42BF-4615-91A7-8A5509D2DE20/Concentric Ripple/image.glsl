@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 // #template generator
+// #alpha
 
 // #audio label="Audio" flow flowlo=0 flowhi=63 flowgate=-50 release=0.18 smooth=0.10
 uniform vec4 uAudio[16];

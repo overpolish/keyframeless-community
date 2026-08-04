@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 // #template generator
+// #alpha
 
 // #motionblur off
 

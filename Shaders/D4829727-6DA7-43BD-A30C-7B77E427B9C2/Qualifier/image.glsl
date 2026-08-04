@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #color-surface ring=hue
 
 // One key is a hue you SELECT and a correction you push it toward. A shot rarely
@@ -192,7 +193,7 @@ float selection(int key, float hue, float colourfulness)
 	return band * satGate;
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -294,4 +295,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec3 graded = encodeFromLinear(max(adjusted, 0.0));
 	fragColor = vec4(mix(source.rgb, graded, uMix), source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

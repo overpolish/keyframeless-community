@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // The panel reads the frame's own luminance, which is exactly what a highlight
 // threshold needs to be aimed against: the cloud shows where the speculars sit
 // and the puck pulls the halation down onto them.
@@ -58,7 +59,7 @@ vec3 halationColor(vec3 color, float luminance)
 	return mix(color, warm, uWarmth);
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -98,4 +99,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	vec3 color = mix(source.rgb, halated, uMix);
 
 	fragColor = vec4(color, source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

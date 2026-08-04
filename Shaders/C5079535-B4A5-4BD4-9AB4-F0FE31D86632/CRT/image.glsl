@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #grain label="Noise" group="Display" default=0 size=1
 
 // #percent label="Curvature" group={"Geometry", "viewfinder"} min=0 max=100 default=30 osc=ring
@@ -25,7 +26,7 @@ uniform float uChroma;
 
 const float PI = 3.14159265359;
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec2 centered = uv * 2.0 - 1.0;
@@ -41,12 +42,13 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	if (outside)
 	{
-		fragColor = vec4(0.0, 0.0, 0.0, 1.0);
+		fragColor = vec4(0.0);
 		return;
 	}
 
 	vec2 chromaOffset = (samplePosition - 0.5) * uChroma * 0.02;
 
+	vec4 source = texture(iChannel0, samplePosition);
 	vec3 color;
 	color.r = texture(iChannel0, clamp(samplePosition + chromaOffset, 0.0, 1.0)).r;
 	color.g = texture(iChannel0, samplePosition).g;
@@ -76,5 +78,17 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	color *= clamp(vignette, 0.0, 1.0);
 
-	fragColor = vec4(color, 1.0);
+	fragColor = vec4(color, source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

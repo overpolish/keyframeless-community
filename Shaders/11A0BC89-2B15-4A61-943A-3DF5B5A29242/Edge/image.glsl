@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #int label="Levels" group={"Posterise", "square.stack.3d.up"} min=2 max=8 default=4
 uniform float uLevels;
 
@@ -27,7 +28,7 @@ float luminanceAt(vec2 position)
 	return dot(color, vec3(0.299, 0.587, 0.114));
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -75,4 +76,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec3 color = mix(posterised, uEdgeCol.rgb, edge);
 	fragColor = vec4(color, source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

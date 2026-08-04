@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // Positive darkens, negative lifts. It is a stop count rather than a percentage
 // because that is what the falloff physically is, and because a signed slider that
 // passes cleanly through zero is one control instead of a direction menu plus a
@@ -78,7 +79,7 @@ float vignetteMask(vec2 uv, vec2 resolution)
 	return smoothstep(size, size + feather, radius);
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 resolution = iResolution.xy;
 	vec2 uv = fragCoord / resolution;
@@ -108,4 +109,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec3 graded = encodeFromLinear(max(linear, 0.0));
 	fragColor = vec4(mix(source.rgb, graded, uMix), source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

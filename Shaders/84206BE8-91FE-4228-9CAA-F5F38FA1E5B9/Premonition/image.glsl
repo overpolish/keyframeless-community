@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 // #template filter
+// #alpha
 // #frames offsets="+3,+6,+12"
 // #motionblur off
 
@@ -17,11 +18,12 @@ uniform float uTintAmount;
 // #color label="Ghost Color" default="#8FA8FF"
 uniform vec4 uTint;
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 
-	vec3 now = texture(iChannel0, uv).rgb;
+	vec4 source = texture(iChannel0, uv);
+	vec3 now = source.rgb;
 	vec3 future = iNeighborAt(uDistance, uv).rgb;
 
 	// The gate is fully open at a summed channel difference of 1/6, so it
@@ -33,5 +35,17 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec3 outColor = 1.0 - (1.0 - now) * (1.0 - ghost * (uStrength * motion));
 
-	fragColor = vec4(clamp(outColor, 0.0, 1.0), 1.0);
+	fragColor = vec4(clamp(outColor, 0.0, 1.0), source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

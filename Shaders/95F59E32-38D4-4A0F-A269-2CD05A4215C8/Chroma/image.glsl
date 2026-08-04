@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #color-surface ring=hue
 
 // #percent label="Saturation" group={"Chroma", "camera.filters"} min=0 max=200 default=100 surface="r:+35"
@@ -68,7 +69,7 @@ float skinWeight(vec3 lab)
 	return 1.0 - smoothstep(30.0, 58.0, distance);
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -103,4 +104,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec3 graded = encodeFromLinear(saturated);
 	fragColor = vec4(mix(source.rgb, graded, uMix), source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

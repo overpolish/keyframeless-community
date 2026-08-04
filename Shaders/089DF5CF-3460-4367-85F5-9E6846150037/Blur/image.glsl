@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #choice label="Mode" group={"Blur", "drop.halffull"} options="Gaussian,Defocus,Directional,Zoom,Spin,Tilt Shift" default=0
 uniform int uMode;
 
@@ -96,7 +97,7 @@ int blurTapCount()
 	return 24;
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec4 source = texture(iChannel0, fragCoord / iResolution.xy);
 
@@ -164,4 +165,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec4 blurred = accumulated / max(totalWeight, 0.0001);
 	fragColor = mix(source, blurred, uMix);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

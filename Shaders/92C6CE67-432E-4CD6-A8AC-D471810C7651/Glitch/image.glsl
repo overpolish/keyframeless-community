@@ -4,6 +4,7 @@
 
 // #template filter
 
+// #alpha
 // #speed group={"Motion", "wind"}
 // #seed group="Motion"
 
@@ -99,7 +100,7 @@ float randomValue(vec2 position)
 	       );
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	float time = iTime * 2.0;
@@ -161,4 +162,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	fragColor.g = mix(fragColor.g, shiftedGreen, shiftWeight);
 	fragColor.b = mix(fragColor.b, shiftedBlue, shiftWeight);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

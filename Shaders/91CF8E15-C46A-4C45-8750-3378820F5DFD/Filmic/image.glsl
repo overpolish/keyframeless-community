@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #color-surface ring=light xaxis="Open,Deep" yaxis="Clipped,Rolled"
 
 // #percent label="Highlight Rolloff" group={"Highlights", "sun.max"} min=0 max=100 default=40 surface="y:+30"
@@ -51,7 +52,7 @@ float toe(float x, float knee, float strength)
 	return knee * pow(max(x, 0.0) / knee, 1.0 + strength * 1.2);
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -76,4 +77,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	              toe(graded.b, uToeKnee, uToe));
 
 	fragColor = vec4(mix(source.rgb, encodeFromLinear(graded), uMix), source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

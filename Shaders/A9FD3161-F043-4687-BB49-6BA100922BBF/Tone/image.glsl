@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #color-surface ring=light xaxis="Flat,Punchy" yaxis="Darker,Brighter"
 
 // #float label="Exposure" group={"Tone", "camera.aperture"} units="stops" min=-5 max=5 default=0 surface="y:+1.5"
@@ -38,7 +39,7 @@ vec3 contrastAroundPivot(vec3 c, float amount, float pivot)
 	return exp2(p + (l - p) * slope);
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -54,4 +55,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec3 graded = encodeFromLinear(max(linear, 0.0));
 	fragColor = vec4(mix(source.rgb, graded, uMix), source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

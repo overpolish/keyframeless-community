@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 // #template generator
+// #alpha
 
 // #audio label="Music" gate=-70 release=0.14 smooth=0.09
 uniform vec4 uMusic[16];
@@ -146,5 +147,6 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec3 color = tint * (upperFill + reflectedFill + glow);
 
-	fragColor = vec4(color, alpha);
+	vec3 straightColor = alpha > 0.0001 ? color / alpha : color;
+	fragColor = vec4(straightColor, alpha);
 }

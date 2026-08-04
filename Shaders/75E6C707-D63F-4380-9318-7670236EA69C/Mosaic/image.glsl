@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #choice label="Shape" group={"Mosaic", "square.grid.3x3.fill"} options="Square,Triangle,Diamond,Hexagon" default=1
 uniform int uShape;
 
@@ -61,7 +62,7 @@ vec2 applyEdges(vec2 position)
 	return clamp(position, 0.0, 1.0);
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -157,4 +158,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	              );
 
 	fragColor = mix(source, mosaic, uMix);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

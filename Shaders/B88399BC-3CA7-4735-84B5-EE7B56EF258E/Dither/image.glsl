@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #choice label="Mode" group={"Style", "circle.lefthalf.filled"} options="Colour,Mono,Duotone" default=2
 uniform int uMode;
 
@@ -104,7 +105,7 @@ float quantize(float value, float threshold, float levels)
 	       );
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -142,4 +143,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	float alpha = mix(source.a, sampled.a, uMix);
 
 	fragColor = vec4(color, alpha);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

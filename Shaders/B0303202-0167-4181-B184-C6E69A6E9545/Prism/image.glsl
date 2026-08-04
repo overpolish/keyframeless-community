@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #choice label="Glass" group={"Pattern", "circle.hexagongrid"} options="Facets,Fluted,Tiles" default=0
 uniform int uStyle;
 
@@ -95,7 +96,7 @@ vec3 glassSample(vec2 pixelPosition)
 	return texture(iChannel0, uv).rgb;
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 centered = fragCoord - uCenter;
 	vec2 patternPosition = glassRotate(centered, uRotation);
@@ -138,4 +139,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec4 source = texture(iChannel0, fragCoord / iResolution.xy);
 	fragColor = vec4(mix(source.rgb, glassColor, uMix), source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

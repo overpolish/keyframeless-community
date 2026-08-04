@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // Percent because the useful range is a ratio, not a number of anything. 100%
 // adds back exactly the detail the blur took out, which is the classic unsharp
 // mask. The slider stops at 100 and the field goes to 300, so the everyday
@@ -75,7 +76,7 @@ float detailMask(float contrast, float detail)
 	return smoothstep(knee * 0.25, knee, contrast);
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 src = texture(iChannel0, uv);
@@ -162,4 +163,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	}
 
 	fragColor = vec4(encodeFromLinear(max(result, 0.0)), src.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }

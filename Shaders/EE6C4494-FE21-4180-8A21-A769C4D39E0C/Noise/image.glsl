@@ -3,6 +3,7 @@
 
 // #template filter
 
+// #alpha
 // #choice label="Style" group={"Noise", "aqi.medium"} options="Fine,Film,Coarse,Colour" default=0
 uniform int uStyle;
 
@@ -94,7 +95,7 @@ vec3 overlayBlend(vec3 base, vec3 blend)
 	return mix(low, high, step(vec3(0.5), base));
 }
 
-void mainImage(out vec4 fragColor, in vec2 fragCoord)
+void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
@@ -156,4 +157,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	vec3 result = mix(source.rgb, clamp(effected, 0.0, 1.0), uMix);
 	fragColor = vec4(result, source.a);
+}
+
+// FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
+// existing maths in that representation; #alpha then expects straight colour,
+// so unwrap once here before Mirage premultiplies the final output.
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
+{
+	mirageFilterImage(fragColor, fragCoord);
+	if (fragColor.a > 0.0001)
+		fragColor.rgb /= fragColor.a;
+	else
+		fragColor.rgb = vec3(0.0);
 }
