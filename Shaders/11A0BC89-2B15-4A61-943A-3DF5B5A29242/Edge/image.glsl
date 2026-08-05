@@ -36,7 +36,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 	float levels = max(float(uLevels), 2.0);
 	vec3 posterised = floor(source.rgb * (levels - 1.0) + 0.5) / (levels - 1.0);
 
-	vec2 pixelStep = float(uEdgeWidth) / iResolution.xy;
+	vec2 pixelStep = (uEdgeWidth * iResolution.y / 1080.0) / iResolution.xy;
 
 	float topLeft = luminanceAt(uv + pixelStep * vec2(-1.0, 1.0));
 	float top = luminanceAt(uv + pixelStep * vec2(0.0, 1.0));

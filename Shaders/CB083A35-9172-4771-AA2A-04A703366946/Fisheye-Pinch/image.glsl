@@ -79,7 +79,9 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	        distorted.y
 	    );
 
-	float feather = float(uFeather) / min(resolution.x, resolution.y);
+	float feather =
+	    (uFeather * resolution.y / 1080.0) /
+	    min(resolution.x, resolution.y);
 	float mask = frameMask(samplePosition, feather);
 
 	vec4 source = texture(

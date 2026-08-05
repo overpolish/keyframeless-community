@@ -135,13 +135,13 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	float threshold = uMode == 0 ? maximum * progress : maximum * (1.0 - progress);
 	float proportionScale = max(min(uProportions.x, uProportions.y), 0.01);
-	float feather = float(uFeather) / iResolution.y / proportionScale;
+	float feather = uFeather / 1080.0 / proportionScale;
 	float inside = insideShape(metric, threshold, feather);
 	float reveal = uMode == 0 ? inside : 1.0 - inside;
 
 	vec4 color = mixTransitionColors(fromColor, toColor, reveal);
 
-	float edgeWidth = float(uEdgeWidth) / iResolution.y / proportionScale;
+	float edgeWidth = uEdgeWidth / 1080.0 / proportionScale;
 
 	if (edgeWidth > 0.0)
 	{

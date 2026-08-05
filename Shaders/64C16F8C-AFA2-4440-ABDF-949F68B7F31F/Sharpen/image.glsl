@@ -90,7 +90,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 	vec3 source = decodeToLinear(src.rgb);
 	float sourceY = dot(source, kLumaWeights);
 
-	vec2 texel = uRadius / iResolution.xy;
+	vec2 texel = (uRadius * iResolution.y / 1080.0) / iResolution.xy;
 
 	vec3 blur = source * kCenterWeight;
 	float weight = kCenterWeight;

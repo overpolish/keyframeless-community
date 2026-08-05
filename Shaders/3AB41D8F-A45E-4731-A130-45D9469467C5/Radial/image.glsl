@@ -122,12 +122,12 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	                                 0.75
 	                             );
 
-	float halfDivider =
-	    uDivider *
-	    0.5;
+	float divider = uDivider * resolution.y / 1080.0;
+	float feather = uFeather * resolution.y / 1080.0;
+	float halfDivider = divider * 0.5;
 
 	float sectorMask = smoothstep(
-	                       halfDivider - uFeather - selectedAntialiasing,
+	                       halfDivider - feather - selectedAntialiasing,
 	                       halfDivider,
 	                       selectedEdgeDistance
 	                   );
@@ -159,7 +159,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	dividerMask *= step(
 	                   0.5,
-	                   uDivider
+	                   divider
 	               );
 
 	vec2 presetCenter = center +

@@ -42,7 +42,7 @@ float lineMask(float distance)
 
 	return 1.0 - smoothstep(
 	           0.0,
-	           antialias * float(uThickness),
+	           antialias * uThickness * iResolution.y / 1080.0,
 	           abs(distance)
 	       );
 }

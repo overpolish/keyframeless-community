@@ -135,7 +135,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 	                    interference
 	                );
 
-	float scanlineSize = max(float(uScanlineSize), 1.0);
+	float scanlineSize = max(uScanlineSize * iResolution.y / 1080.0, 1.0);
 	float scanlineBand = floor(mod(fragCoord.y / scanlineSize, 2.0));
 
 	if (scanlineBand == 0.0)

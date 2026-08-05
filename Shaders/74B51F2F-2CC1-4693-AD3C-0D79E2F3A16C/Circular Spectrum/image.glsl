@@ -347,7 +347,7 @@ vec4 particleLayer(vec2 p, float baseRadius)
 	float aspect = iResolution.x / iResolution.y;
 	float frameRadius = 0.5 * length(vec2(aspect, 1.0));
 	float audio = overallAudioLevel();
-	float size = max(uParticleSize / iResolution.y, 0.0005);
+	float size = max(uParticleSize / 1080.0, 0.0005);
 
 	float opacity = 0.0;
 	vec3 premultiplied = vec3(0.0);
@@ -453,7 +453,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	float baseRadius = uRadius + bassLevel() * uBassPulse * 0.08;
 	float spectrumHeight = level * height;
 	float outerRadius = baseRadius + spectrumHeight;
-	float thickness = max(uThickness / resolution.y, 0.0005);
+	float thickness = max(uThickness / 1080.0, 0.0005);
 	float edgeAA = max(fwidth(distanceFromCenter - outerRadius), 0.75 / resolution.y);
 	float glowSize = max(5.0 / resolution.y, 0.0005);
 

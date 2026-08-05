@@ -140,7 +140,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 	float contentAlpha = source.a * areaMask * insideSource;
 
-	float halfBorderWidth = uBorder * inverseHeight * 0.5;
+	float border = uBorder * resolution.y / 1080.0;
+	float halfBorderWidth = border * inverseHeight * 0.5;
 	vec2 frameHalfExtents = vec2(aspect, 1.0) * 0.5;
 
 	vec2 firstChord = lineChord(
@@ -188,7 +189,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	float borderMask =
 	    borderBand *
 	    revealMask *
-	    step(0.5, uBorder);
+	    step(0.5, border);
 
 	float borderAlpha = borderMask * uBorderColor.a;
 

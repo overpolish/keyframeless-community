@@ -23,7 +23,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
 
-	float radius = max(float(uSize), 1.0);
+	float radius = max(uSize * iResolution.y / 1080.0, 1.0);
 	float sampleCount = float(uSamples);
 
 	vec3 bloom = vec3(0.0);

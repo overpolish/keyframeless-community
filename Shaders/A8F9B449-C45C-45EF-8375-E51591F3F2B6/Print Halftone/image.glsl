@@ -86,7 +86,7 @@ float halftoneInk(vec3 color, int channel)
 
 float halftoneDot(vec2 fragCoord, float angle, vec2 offset, int channel)
 {
-	float cellSize = max(uCellSize, 1.0);
+	float cellSize = max(uCellSize * iResolution.y / 1080.0, 1.0);
 	mat2 rotation = halftoneRotation(angle);
 	vec2 centered = fragCoord - 0.5 * iResolution.xy - offset;
 	vec2 gridPosition = rotation * centered;
@@ -121,7 +121,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 	}
 	else
 	{
-		float shift = uMisregistration;
+		float shift = uMisregistration * iResolution.y / 1080.0;
 		vec2 cyanOffset = vec2(-1.0, 0.35) * shift;
 		vec2 magentaOffset = vec2(0.75, -0.55) * shift;
 		vec2 yellowOffset = vec2(0.25, 0.8) * shift;

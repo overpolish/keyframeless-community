@@ -109,9 +109,10 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	float distanceFromCenter = length(position);
 	float angle = atan(position.y, position.x);
 	float minSide = min(iResolution.x, iResolution.y);
+	float thicknessPixels = uThickness * iResolution.y / 1080.0;
 
 	vec2 farCorner = max(uCenter, iResolution.xy - uCenter);
-	float outerRadius = length(farCorner) + uThickness * 4.0;
+	float outerRadius = length(farCorner) + thicknessPixels * 4.0;
 	float innerRadius = uInnerRadius * minSide * 0.5;
 	float clock = iTime * uIdleSpeed * 0.18 + uAudioFlow * uAudioSpeed * 0.45;
 
@@ -136,7 +137,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 		float distanceToRing = abs(distanceFromCenter - radius - wave);
 		float aa = max(fwidth(distanceFromCenter), 0.75);
-		float thickness = uThickness * (1.0 + energy * 0.65);
+		float thickness = thicknessPixels * (1.0 + energy * 0.65);
 		float core = 1.0 - smoothstep(thickness - aa, thickness + aa, distanceToRing);
 
 		float glowWidth = thickness + uGlow * 18.0;

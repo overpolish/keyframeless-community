@@ -73,7 +73,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 		float index = float(i) + 0.5;
 		float radiusFraction = sqrt(index / 32.0);
 		float angle = index * goldenAngle;
-		float radius = radiusFraction * uSpread;
+		float radius = radiusFraction * uSpread * iResolution.y / 1080.0;
 		vec2 offset = vec2(cos(angle), sin(angle)) * radius / iResolution.xy;
 
 		vec3 sampleColor = texture(iChannel0, clamp(uv + offset, 0.0, 1.0)).rgb;

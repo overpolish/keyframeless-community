@@ -103,7 +103,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	    ? resolution.x
 	    : resolution.y;
 
-	float halfGap = uGap * 0.5 / axisResolution;
+	float gap = uGap * resolution.y / 1080.0;
+	float halfGap = gap * 0.5 / axisResolution;
 
 	if (uPanel > 0)
 		panelMinimum += halfGap;
@@ -143,7 +144,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	                      );
 
 	float panelAntialiasing = max(fwidth(panelDistance), 0.75);
-	float panelSoftness = max(uFeather, panelAntialiasing);
+	float panelSoftness = max(uFeather * resolution.y / 1080.0, panelAntialiasing);
 
 	float panelMask = 1.0 - smoothstep(
 	                      -panelSoftness,
@@ -209,12 +210,12 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	                            );
 
 	float dividerMask = 1.0 - smoothstep(
-	                        uGap * 0.5,
-	                        uGap * 0.5 + dividerAntialiasing,
+	                        gap * 0.5,
+	                        gap * 0.5 + dividerAntialiasing,
 	                        dividerDistance
 	                    );
 
-	dividerMask *= step(0.5, uGap);
+	dividerMask *= step(0.5, gap);
 
 	float dividerAlpha =
 	    dividerMask *

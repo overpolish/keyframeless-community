@@ -254,15 +254,18 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	                         radius,
 	                         uRadius
 	                     );
+	float pixelScale = resolution.y / 1080.0;
+	float feather = max(uFeather * pixelScale, 0.0);
+	float border = uBorder * pixelScale;
 
 	float contentMask = shapeMask(
 	                        cardDistance,
-	                        max(uFeather, 0.0)
+	                        feather
 	                    );
 
 	float outerMask = shapeMask(
-	                      cardDistance - uBorder,
-	                      max(uFeather, 0.0)
+	                      cardDistance - border,
+	                      feather
 	                  );
 
 	float borderMask = max(
@@ -329,10 +332,10 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	                           halfSize,
 	                           radius,
 	                           uRadius
-	                       ) - uBorder;
+	                       ) - border;
 
 	float shadowSoftness =
-	    max(uShadowBlur, 0.5);
+	    max(uShadowBlur * pixelScale, 0.5);
 
 	float shadowMask = 1.0 - smoothstep(
 	                       -shadowSoftness,
