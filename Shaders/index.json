@@ -38,6 +38,9 @@
     },
     {
       "files": [
+        "buffer-b.glsl",
+        "buffer-c.glsl",
+        "buffer-d.glsl",
         "image.glsl",
         "metadata.json",
         "preview.jpg"
@@ -50,12 +53,15 @@
         "id": "F60ADBEA-70AE-4637-A981-D4443D601721",
         "name": "Bloom",
         "preview": "preview.jpg",
-        "version": 1
+        "version": 2
       },
       "uuid": "F60ADBEA-70AE-4637-A981-D4443D601721"
     },
     {
       "files": [
+        "buffer-b.glsl",
+        "buffer-c.glsl",
+        "buffer-d.glsl",
         "image.glsl",
         "metadata.json",
         "preview.jpg"
@@ -68,12 +74,14 @@
         "id": "A537CF1F-3EAE-446C-BD7F-E0CF7968368A",
         "name": "Bloom Mist",
         "preview": "preview.jpg",
-        "version": 1
+        "version": 2
       },
       "uuid": "A537CF1F-3EAE-446C-BD7F-E0CF7968368A"
     },
     {
       "files": [
+        "buffer-b.glsl",
+        "buffer-c.glsl",
         "image.glsl",
         "metadata.json",
         "preview.jpg"
@@ -86,7 +94,7 @@
         "id": "089DF5CF-3460-4367-85F5-9E6846150037",
         "name": "Blur",
         "preview": "preview.jpg",
-        "version": 1
+        "version": 2
       },
       "uuid": "089DF5CF-3460-4367-85F5-9E6846150037"
     },
@@ -452,6 +460,9 @@
     },
     {
       "files": [
+        "buffer-b.glsl",
+        "buffer-c.glsl",
+        "buffer-d.glsl",
         "image.glsl",
         "metadata.json",
         "preview.jpg"
@@ -464,7 +475,7 @@
         "id": "78FC60F4-116B-423A-9283-6DDA04873605",
         "name": "Film Halation",
         "preview": "preview.jpg",
-        "version": 1
+        "version": 2
       },
       "uuid": "78FC60F4-116B-423A-9283-6DDA04873605"
     },
