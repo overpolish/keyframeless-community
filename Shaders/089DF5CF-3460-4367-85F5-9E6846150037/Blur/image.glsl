@@ -113,6 +113,17 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 		return;
 	}
 
+	// Gaussian and Tilt Shift are conventional soft blurs. Buffer B/C perform
+	// continuous horizontal and vertical passes for them; the old sparse spiral
+	// left recognizable copies at larger radii. Defocus deliberately keeps its
+	// aperture-shaped disk sampling below.
+	if (uMode == 0 || uMode == 5)
+	{
+		vec4 blurred = texture(iChannel2, fragCoord / iResolution.xy);
+		fragColor = mix(source, blurred, uMix);
+		return;
+	}
+
 	int tapCount = blurTapCount();
 	vec4 accumulated = source;
 	float totalWeight = 1.0;

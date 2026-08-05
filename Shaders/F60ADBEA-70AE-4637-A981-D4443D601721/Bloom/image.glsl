@@ -16,52 +16,21 @@ uniform float uSize;
 // #int label="Quality" group="Bloom" min=8 max=48 default=24
 uniform int uSamples;
 
-const float GOLDEN_ANGLE = 2.399963;
-
 void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
+	vec4 bloom = texture(iChannel3, uv);
 
-	float radius = max(float(uSize), 1.0);
-	float sampleCount = float(uSamples);
-
-	vec3 bloom = vec3(0.0);
-	float totalWeight = 0.0;
-
-	for (int i = 0; i < 48; ++i)
-	{
-		if (i >= uSamples)
-			break;
-
-		float index = float(i);
-		float angle = index * GOLDEN_ANGLE;
-		float distance = sqrt(index / sampleCount) * radius;
-		vec2 direction = vec2(cos(angle), sin(angle));
-		vec2 offset = direction * distance / iResolution.xy;
-
-		vec3 sampleColor = texture(
-		                       iChannel0,
-		                       clamp(uv + offset, 0.0, 1.0)
-		                   ).rgb;
-
-		float luminance = dot(sampleColor, vec3(0.299, 0.587, 0.114));
-		float brightness = max(luminance - uThresh, 0.0);
-		float weight = 1.0 - distance / radius;
-
-		bloom += sampleColor * brightness * weight;
-		totalWeight += weight;
-	}
-
-	bloom /= max(totalWeight, 0.001);
-
-	vec3 color = source.rgb + bloom * uIntensity * 2.0;
+	// Buffer D is a smooth, thresholded highlight blur. Add it as light rather
+	// than compositing another picture over the source.
+	vec3 color = source.rgb + bloom.rgb * uIntensity * 2.0;
 	fragColor = vec4(color, source.a);
 }
 
 // FxPlug supplies iChannel0 premultiplied. The filter body keeps doing its
-// existing maths in that representation; #alpha then expects straight colour,
-// so unwrap once here before Mirage premultiplies the final output.
+// maths in that representation; #alpha expects straight colour and performs
+// the final premultiply itself.
 void mainImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	mirageFilterImage(fragColor, fragCoord);
