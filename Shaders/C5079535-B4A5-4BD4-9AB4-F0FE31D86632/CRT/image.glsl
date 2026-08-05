@@ -54,8 +54,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 	color.g = texture(iChannel0, samplePosition).g;
 	color.b = texture(iChannel0, clamp(samplePosition - chromaOffset, 0.0, 1.0)).b;
 
-	float scanSize = max(float(uScanSize) * iResolution.y / 1080.0, 1.0);
-	float scanPhase = fragCoord.y * PI / scanSize;
+	float scanPhase = fragCoord.y * PI / float(uScanSize);
 	float scanline = 0.5 + 0.5 * sin(scanPhase);
 	color *= 1.0 - uScan * 0.6 * scanline;
 

@@ -139,7 +139,7 @@ float axisLines(
 	float result = 0.0;
 	float spacing = 1.0 / float(count);
 	float pixelStep = max(fwidth(coordinate), 0.000001);
-	float halfWidth = max(uLineWidth * iResolution.y / 1080.0, 0.25) * 0.5;
+	float halfWidth = max(uLineWidth, 0.25) * 0.5;
 	int echoCount = clamp(int(floor(uEchoes + 0.5)), 1, 4);
 
 	for (int i = 0; i < 72; ++i)
@@ -188,7 +188,7 @@ float axisLines(
 			float echoOffset = echo == 0
 			                   ? 0.0
 			                   : (hash11(identity * 5.3 + echoIndex * 11.7) * 2.0 - 1.0) *
-			                   uEchoSpread * iResolution.y / 1080.0 *
+			                   uEchoSpread *
 			                   pixelStep;
 
 			float echoMovement = echo == 0
@@ -197,7 +197,7 @@ float axisLines(
 			                            identity * 7.9 + echoIndex * 13.1,
 			                            time * 0.83
 			                        ) - 0.5) *
-			                     uEchoSpread * iResolution.y / 1080.0 *
+			                     uEchoSpread *
 			                     pixelStep *
 			                     uMovement;
 

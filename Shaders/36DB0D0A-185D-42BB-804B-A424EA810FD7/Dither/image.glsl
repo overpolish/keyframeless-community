@@ -246,12 +246,11 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	float time = iTime * 0.5;
 
 	vec2 referenceResolution = vec2(aspect * 1080.0, 1080.0);
-	vec2 referenceCoord = fragCoord / iResolution.xy * referenceResolution;
 	float pixelSize = max(float(uPixelSize), 1.0);
 
-	vec2 pixelCoord = (referenceCoord - referenceResolution * 0.5) / pixelSize;
+	vec2 pixelCoord = (fragCoord - iResolution.xy * 0.5) / pixelSize;
 	vec2 pixelizedCoord = (floor(pixelCoord) + 0.5) * pixelSize;
-	vec2 normalizedPosition = pixelizedCoord / referenceResolution;
+	vec2 normalizedPosition = pixelizedCoord / iResolution.xy;
 
 	vec2 center = uCenter / iResolution.xy;
 	normalizedPosition -= center - 0.5;

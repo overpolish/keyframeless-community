@@ -124,7 +124,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	float threshold = uMode == 0 ? maximum * progress : maximum * (1.0 - progress);
 
 	float proportionScale = max(min(uProportions.x, uProportions.y), 0.01);
-	float feather = uFeather / 1080.0 / proportionScale;
+	float feather = float(uFeather) / iResolution.y / proportionScale;
 	float inside;
 
 	if (feather <= 0.000001)

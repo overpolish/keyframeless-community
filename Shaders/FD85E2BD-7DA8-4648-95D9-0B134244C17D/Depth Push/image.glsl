@@ -181,10 +181,10 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	float foregroundAA = max(fwidth(foregroundDistance), 1.0 / iResolution.y);
 	float foregroundMask = 1.0 - smoothstep(-foregroundAA, foregroundAA, foregroundDistance);
 
-	vec2 shadowOffset = -axis * uShadowDistance / 1080.0;
+	vec2 shadowOffset = -axis * float(uShadowDistance) / iResolution.y;
 	vec2 shadowUV = transformedUV(uv, foregroundOffset + shadowOffset, foregroundRotation, foregroundScale * 1.01);
 	float shadowDistance = cardDistance(shadowUV);
-	float shadowBlur = max(uShadowBlur / 1080.0, 0.0001);
+	float shadowBlur = max(float(uShadowBlur) / iResolution.y, 0.0001);
 	float shadowMask = 1.0 - smoothstep(-shadowBlur, shadowBlur, shadowDistance);
 	shadowMask *= 1.0 - foregroundMask;
 	shadowMask *= uShadow * uShadowColor.a * energy;

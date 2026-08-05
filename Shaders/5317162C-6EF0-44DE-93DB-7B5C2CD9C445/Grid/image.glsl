@@ -106,9 +106,8 @@ void cellBounds(
 	float column = mod(float(index), grid.x);
 	float row = floor(float(index) / grid.x);
 
-	float pixelScale = resolution.y / 1080.0;
-	vec2 padding = vec2(uPadding * pixelScale) / resolution;
-	vec2 gap = vec2(uGap * pixelScale) / resolution;
+	vec2 padding = vec2(uPadding) / resolution;
+	vec2 gap = vec2(uGap) / resolution;
 	vec2 available = max(vec2(0.001), vec2(1.0) - padding * 2.0);
 	vec2 pitch = available / grid;
 	vec2 gridPosition = vec2(column, grid.y - row - 1.0);
@@ -142,7 +141,7 @@ float cellMask(
 	                 );
 
 	float antialias = max(fwidth(distance), 0.5);
-	float feather = max(uFeather * resolution.y / 1080.0, 0.0);
+	float feather = max(uFeather, 0.0);
 
 	return 1.0 - smoothstep(
 	           -feather,

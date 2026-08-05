@@ -101,7 +101,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 {
 	vec4 source = texture(iChannel0, fragCoord / iResolution.xy);
 
-	float localRadius = uRadius * iResolution.y / 1080.0;
+	float localRadius = uRadius;
 	if (uMode == 5)
 		localRadius *= tiltShiftAmount(fragCoord);
 

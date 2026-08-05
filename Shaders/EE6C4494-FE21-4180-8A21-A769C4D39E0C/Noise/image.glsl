@@ -107,8 +107,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 	else if (uAnimation == 2)
 		motion = iTime * uRate * vec2(5.7, -3.9);
 
-	float size = max(uSize * iResolution.y / 1080.0, 1.0);
-	vec2 p = fragCoord / size + motion;
+	vec2 p = fragCoord / max(uSize, 1.0) + motion;
 	vec3 noise;
 
 	if (uStyle == 1)

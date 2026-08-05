@@ -55,7 +55,7 @@ vec2 glassRotate(vec2 value, float angle)
 
 void glassPattern(vec2 position, out vec2 surfaceNormal, out float edge)
 {
-	float cellSize = max(uCellSize * iResolution.y / 1080.0, 1.0);
+	float cellSize = max(uCellSize, 1.0);
 	vec2 grid = position / cellSize;
 	vec2 cell = floor(grid);
 	vec2 local = fract(grid) - 0.5;
@@ -106,7 +106,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 	glassPattern(patternPosition, patternNormal, edge);
 
 	vec2 screenNormal = glassRotate(patternNormal, -uRotation);
-	float refraction = uRefraction * uCellSize * iResolution.y / 1080.0 * 0.18;
+	float refraction = uRefraction * uCellSize * 0.18;
 	vec2 displacement = screenNormal * refraction;
 
 	float separation = uDispersion * 12.0;
@@ -118,7 +118,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 	glassColor.g = glassSample(samplePosition).g;
 	glassColor.b = glassSample(samplePosition - chromaOffset).b;
 
-	float frostRadius = uFrost * uCellSize * iResolution.y / 1080.0 * 0.08;
+	float frostRadius = uFrost * uCellSize * 0.08;
 	if (frostRadius > 0.001)
 	{
 		vec2 diagonal = vec2(0.70710678) * frostRadius;

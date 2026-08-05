@@ -83,7 +83,7 @@ float mapValue(vec2 uv)
 	if (uMapBlur <= 0)
 		return channelValue(mapColor(uv));
 
-	vec2 offset = vec2(uMapBlur * iResolution.y / 1080.0) / iResolution.xy;
+	vec2 offset = vec2(float(uMapBlur)) / iResolution.xy;
 	float value = channelValue(mapColor(uv)) * 4.0;
 
 	value += channelValue(mapColor(uv + vec2(offset.x, 0.0))) * 2.0;

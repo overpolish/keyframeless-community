@@ -126,9 +126,8 @@ float solidGrid(vec2 position, float spacing)
 {
 	vec2 distance = abs(repeatCell(position, spacing));
 
-	float stroke = uStroke * iResolution.y / 1080.0;
-	float vertical = axisStroke(distance.x, position.x, stroke);
-	float horizontal = axisStroke(distance.y, position.y, stroke);
+	float vertical = axisStroke(distance.x, position.x, uStroke);
+	float horizontal = axisStroke(distance.y, position.y, uStroke);
 
 	return max(vertical, horizontal);
 }
@@ -136,7 +135,7 @@ float solidGrid(vec2 position, float spacing)
 float horizontalLines(vec2 position, float spacing)
 {
 	float distance = abs(repeatCell(position, spacing).y);
-	return axisStroke(distance, position.y, uStroke * iResolution.y / 1080.0) * uLineStrength;
+	return axisStroke(distance, position.y, uStroke) * uLineStrength;
 }
 
 float dashedGrid(vec2 position, float spacing)
@@ -144,9 +143,8 @@ float dashedGrid(vec2 position, float spacing)
 	vec2 distance = abs(repeatCell(position, spacing));
 	vec2 dashDistance = abs(repeatCell(position, spacing * 0.34));
 
-	float stroke = uStroke * iResolution.y / 1080.0;
-	float vertical = axisStroke(distance.x, position.x, stroke);
-	float horizontal = axisStroke(distance.y, position.y, stroke);
+	float vertical = axisStroke(distance.x, position.x, uStroke);
+	float horizontal = axisStroke(distance.y, position.y, uStroke);
 
 	float verticalDash = 1.0 - smoothstep(
 	                         spacing * 0.09,
@@ -181,7 +179,7 @@ float ringsPattern(vec2 position, float spacing)
 {
 	vec2 local = repeatCell(position, spacing);
 	float radius = spacing * 0.22 * uElementSize;
-	return distanceStroke(abs(length(local) - radius), uStroke * iResolution.y / 1080.0);
+	return distanceStroke(abs(length(local) - radius), uStroke);
 }
 
 float squaresPattern(vec2 position, float spacing)
@@ -194,7 +192,7 @@ float squaresPattern(vec2 position, float spacing)
 	    length(max(delta, 0.0)) +
 	    min(max(delta.x, delta.y), 0.0);
 
-	return distanceStroke(abs(distance), uStroke * iResolution.y / 1080.0);
+	return distanceStroke(abs(distance), uStroke);
 }
 
 float crossesPattern(vec2 position, float spacing)
@@ -203,7 +201,7 @@ float crossesPattern(vec2 position, float spacing)
 	float extent = spacing * 0.20 * uElementSize;
 
 	float horizontal =
-	    axisStroke(local.y, position.y, uStroke * iResolution.y / 1080.0) *
+	    axisStroke(local.y, position.y, uStroke) *
 	    (1.0 - smoothstep(
 	         extent,
 	         extent + axisFootprint(position.x),
@@ -211,7 +209,7 @@ float crossesPattern(vec2 position, float spacing)
 	     ));
 
 	float vertical =
-	    axisStroke(local.x, position.x, uStroke * iResolution.y / 1080.0) *
+	    axisStroke(local.x, position.x, uStroke) *
 	    (1.0 - smoothstep(
 	         extent,
 	         extent + axisFootprint(position.y),
@@ -228,7 +226,7 @@ float crosshairsPattern(vec2 position, float spacing)
 	float outer = spacing * 0.22 * uElementSize;
 
 	float horizontal =
-	    axisStroke(local.y, position.y, uStroke * iResolution.y / 1080.0) *
+	    axisStroke(local.y, position.y, uStroke) *
 	    smoothstep(
 	        inner - axisFootprint(position.x),
 	        inner + axisFootprint(position.x),
@@ -241,7 +239,7 @@ float crosshairsPattern(vec2 position, float spacing)
 	     ));
 
 	float vertical =
-	    axisStroke(local.x, position.x, uStroke * iResolution.y / 1080.0) *
+	    axisStroke(local.x, position.x, uStroke) *
 	    smoothstep(
 	        inner - axisFootprint(position.y),
 	        inner + axisFootprint(position.y),
@@ -272,7 +270,7 @@ float diagonalsPattern(vec2 position, float spacing)
 	                     diagonalSpacing * 0.5
 	                 );
 
-	return axisStroke(distance, diagonal, uStroke * iResolution.y / 1080.0);
+	return axisStroke(distance, diagonal, uStroke);
 }
 
 void compositePattern(inout vec4 canvas, float mask, vec4 ink)
@@ -323,7 +321,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	    (floor(position * patternPixelsPerUnit) + 0.5) /
 	    patternPixelsPerUnit;
 
-	float spacing = max(uCellSize * resolution.y / 1080.0, 1.0) / resolution.y;
+	float spacing = max(uCellSize, 1.0) / resolution.y;
 
 	float coarsePaper = valueNoise(fragCoord * 0.012 + 31.7) - 0.5;
 	float finePaper = patternHash(fragCoord + 71.0) - 0.5;

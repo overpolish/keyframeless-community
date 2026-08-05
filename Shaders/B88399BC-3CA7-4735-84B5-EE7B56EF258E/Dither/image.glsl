@@ -110,7 +110,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 	vec2 uv = fragCoord / iResolution.xy;
 	vec4 source = texture(iChannel0, uv);
 
-	float pixelSize = max(uPixelSize * iResolution.y / 1080.0, 1.0);
+	float pixelSize = max(float(uPixelSize), 1.0);
 	vec2 cell = floor(fragCoord / pixelSize);
 	vec2 samplePosition = (cell + 0.5) * pixelSize / iResolution.xy;
 	vec4 sampled = texture(iChannel0, clamp(samplePosition, 0.0, 1.0));

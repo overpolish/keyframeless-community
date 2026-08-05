@@ -106,8 +106,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	vec2 gradient = vec2(dFdx(delta), dFdy(delta));
 	float distancePx = abs(delta) / max(length(gradient), 0.0001);
 	float aa = max(fwidth(distancePx), 0.75);
-	float thickness = uThickness * iResolution.y / 1080.0;
-	float line = 1.0 - smoothstep(thickness - aa, thickness + aa, distancePx);
+	float line = 1.0 - smoothstep(uThickness - aa, uThickness + aa, distancePx);
 	line *= insideX;
 
 	float aaY = 1.5 / halfSize.y;
@@ -130,8 +129,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	float baseline = 1.0 - smoothstep(0.5, 1.5, abs(p.y));
 	baseline *= insideX;
 
-	float glowSize = max(uGlowSize * iResolution.y / 1080.0, 1.0);
-	float glow = exp(-distancePx / glowSize) * uGlow * insideX;
+	float glow = exp(-distancePx / max(uGlowSize, 1.0)) * uGlow * insideX;
 	float coreAlpha = max(line, fill * uFill) * uWave.a;
 	float baselineAlpha = baseline * uBaseline * uWave.a * (1.0 - coreAlpha);
 	float glowAlpha = glow * uWave.a * (1.0 - coreAlpha) * (1.0 - baselineAlpha);

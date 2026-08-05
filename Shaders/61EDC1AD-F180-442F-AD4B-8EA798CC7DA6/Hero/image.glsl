@@ -95,9 +95,8 @@ void areaBounds(
     out vec2 upper
 )
 {
-	float pixelScale = resolution.y / 1080.0;
-	vec2 padding = vec2(uPadding * pixelScale);
-	vec2 gap = vec2(uGap * pixelScale);
+	vec2 padding = vec2(uPadding);
+	vec2 gap = vec2(uGap);
 	vec2 frameLower = padding;
 	vec2 frameUpper = resolution - padding;
 	vec2 available = max(frameUpper - frameLower, vec2(1.0));
@@ -205,11 +204,10 @@ float areaMask(
 	                 );
 
 	float antialias = max(fwidth(distance), 0.5);
-	float feather = max(uFeather * iResolution.y / 1080.0, 0.0);
 
 	return 1.0 - smoothstep(
-	           -feather,
-	           feather + antialias * 2.0,
+	           -max(uFeather, 0.0),
+	           max(uFeather, 0.0) + antialias * 2.0,
 	           distance
 	       );
 }

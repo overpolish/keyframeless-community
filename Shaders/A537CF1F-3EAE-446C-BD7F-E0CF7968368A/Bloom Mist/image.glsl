@@ -97,7 +97,7 @@ void mirageFilterImage(out vec4 fragColor, in vec2 fragCoord)
 		float radiusFraction = sqrt(index / float(sampleCount));
 		float angle = index * GOLDEN_ANGLE;
 		vec2 direction = vec2(cos(angle), sin(angle));
-		vec2 offset = direction * radiusFraction * uRadius * iResolution.y / 1080.0;
+		vec2 offset = direction * radiusFraction * uRadius;
 		float weight = exp(-2.2 * radiusFraction * radiusFraction);
 
 		vec3 sampleColor = mistSample(fragCoord + offset);
