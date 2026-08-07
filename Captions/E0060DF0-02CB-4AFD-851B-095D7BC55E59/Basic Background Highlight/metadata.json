@@ -10,8 +10,13 @@
     {
       "kind" : "color",
       "name" : "Highlight Color"
+    },
+    {
+      "kind" : "font",
+      "name" : "Custom Font"
     }
   ],
   "perWord" : true,
-  "perWordStartsAtZero" : true
+  "perWordStartsAtZero" : true,
+  "version" : 2
 }
