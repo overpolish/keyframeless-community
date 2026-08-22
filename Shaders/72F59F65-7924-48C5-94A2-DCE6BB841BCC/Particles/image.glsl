@@ -36,11 +36,44 @@ uniform float uGlow;
 // #color label="Particle Color" default="#FF5AA0FF"
 uniform vec4 uColor;
 
+// #choice label="Background" group={"Background", "photo"} options="Transparent,Colour,Source Clip" default=0
+uniform int uBackground;
+
+// #percent label="Background Dim" group="Background" min=0 max=100 default=20 visibleby=uBackground visiblevalues={2}
+uniform float uBackgroundDim;
+
+// #color label="Background Colour" default="#080A12"
+uniform vec4 uBackgroundColor;
+
 const float TAU = 6.28318530718;
 
 float hash11(float value)
 {
 	return fract(sin(value * 127.1) * 43758.5453);
+}
+
+vec4 over(vec4 foreground, vec4 background)
+{
+	float alpha = foreground.a + background.a * (1.0 - foreground.a);
+	vec3 premultiplied = foreground.rgb * foreground.a;
+	premultiplied += background.rgb * background.a * (1.0 - foreground.a);
+	vec3 rgb = alpha > 0.0001 ? premultiplied / alpha : vec3(0.0);
+
+	return vec4(rgb, alpha);
+}
+
+vec4 backgroundLayer(vec2 fragCoord)
+{
+	if (uBackground == 1)
+		return uBackgroundColor;
+
+	if (uBackground == 2)
+	{
+		vec4 source = texture(iChannel0, fragCoord / iResolution.xy);
+		return vec4(source.rgb * (1.0 - uBackgroundDim), source.a);
+	}
+
+	return vec4(0.0);
 }
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord)
@@ -78,5 +111,5 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 	float alpha = clamp(brightness * uColor.a, 0.0, 1.0);
 
 	vec3 straightColor = alpha > 0.0001 ? color / alpha : color;
-	fragColor = vec4(straightColor, alpha);
+	fragColor = over(vec4(straightColor, alpha), backgroundLayer(fragCoord));
 }

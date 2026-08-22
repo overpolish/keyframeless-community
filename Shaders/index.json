@@ -8,6 +8,7 @@
       ],
       "folder": "Aurora",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -26,13 +27,14 @@
       ],
       "folder": "Bars",
       "metadata": {
+        "audio": true,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
         "id": "5148E5CA-5B31-4F19-BB6D-4FC4ABAECBC8",
         "name": "Bars",
         "preview": "preview.jpg",
-        "version": 1
+        "version": 2
       },
       "uuid": "5148E5CA-5B31-4F19-BB6D-4FC4ABAECBC8"
     },
@@ -47,6 +49,7 @@
       ],
       "folder": "Bloom",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -68,6 +71,7 @@
       ],
       "folder": "Bloom Mist",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": true,
@@ -88,6 +92,7 @@
       ],
       "folder": "Blur",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -106,6 +111,7 @@
       ],
       "folder": "Burn",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "transition",
         "grading": false,
@@ -124,6 +130,7 @@
       ],
       "folder": "Camera Iris",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "transition",
         "grading": false,
@@ -142,6 +149,7 @@
       ],
       "folder": "Card Flip",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "transition",
         "grading": false,
@@ -160,6 +168,7 @@
       ],
       "folder": "Cards",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "layout",
         "grading": false,
@@ -178,6 +187,7 @@
       ],
       "folder": "Chroma",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": true,
@@ -196,6 +206,7 @@
       ],
       "folder": "Circular Spectrum",
       "metadata": {
+        "audio": true,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -214,13 +225,14 @@
       ],
       "folder": "Concentric Ripple",
       "metadata": {
+        "audio": true,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
         "id": "E42E1561-42BF-4615-91A7-8A5509D2DE20",
         "name": "Concentric Ripple",
         "preview": "preview.jpg",
-        "version": 1
+        "version": 2
       },
       "uuid": "E42E1561-42BF-4615-91A7-8A5509D2DE20"
     },
@@ -232,6 +244,7 @@
       ],
       "folder": "Contour",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -250,6 +263,7 @@
       ],
       "folder": "Crosswarp",
       "metadata": {
+        "audio": false,
         "author": "Eke Péter",
         "category": "transition",
         "grading": false,
@@ -268,6 +282,7 @@
       ],
       "folder": "CRT",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -286,6 +301,7 @@
       ],
       "folder": "Currents",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -304,6 +320,7 @@
       ],
       "folder": "Defocus Blur",
       "metadata": {
+        "audio": false,
         "author": "Sergey Kosarevsky",
         "category": "transition",
         "grading": false,
@@ -322,6 +339,7 @@
       ],
       "folder": "Denoise",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -340,6 +358,7 @@
       ],
       "folder": "Depth Push",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "transition",
         "grading": false,
@@ -358,6 +377,7 @@
       ],
       "folder": "Dissolve",
       "metadata": {
+        "audio": false,
         "author": "hjm1fb",
         "category": "transition",
         "grading": false,
@@ -376,6 +396,7 @@
       ],
       "folder": "Dither",
       "metadata": {
+        "audio": false,
         "author": "Paper Design",
         "category": "generator",
         "grading": false,
@@ -394,6 +415,7 @@
       ],
       "folder": "Dither",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -412,6 +434,7 @@
       ],
       "folder": "Doom Screen",
       "metadata": {
+        "audio": false,
         "author": "Zeh Fernando",
         "category": "transition",
         "grading": false,
@@ -430,6 +453,7 @@
       ],
       "folder": "Dynamic Grid",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -448,6 +472,7 @@
       ],
       "folder": "Edge",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -469,6 +494,7 @@
       ],
       "folder": "Film Halation",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": true,
@@ -487,6 +513,7 @@
       ],
       "folder": "Filmic",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": true,
@@ -505,6 +532,7 @@
       ],
       "folder": "Fisheye-Pinch",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -523,6 +551,7 @@
       ],
       "folder": "Fluid",
       "metadata": {
+        "audio": false,
         "author": "Paul Bakaus",
         "category": "generator",
         "grading": false,
@@ -541,6 +570,7 @@
       ],
       "folder": "Flyeye",
       "metadata": {
+        "audio": false,
         "author": "gre",
         "category": "transition",
         "grading": false,
@@ -559,6 +589,7 @@
       ],
       "folder": "Gentle Gradient",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -577,6 +608,7 @@
       ],
       "folder": "Glitch",
       "metadata": {
+        "audio": false,
         "author": "Ashima Arts / Ian McEwan / stegu",
         "category": "filter",
         "grading": false,
@@ -595,6 +627,7 @@
       ],
       "folder": "God Rays",
       "metadata": {
+        "audio": false,
         "author": "Paper Design",
         "category": "generator",
         "grading": false,
@@ -613,6 +646,7 @@
       ],
       "folder": "Grade",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": true,
@@ -631,6 +665,7 @@
       ],
       "folder": "Gradient Map",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -649,6 +684,7 @@
       ],
       "folder": "Graduated",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -667,6 +703,7 @@
       ],
       "folder": "Grid",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "layout",
         "grading": false,
@@ -685,6 +722,7 @@
       ],
       "folder": "Grid Hills",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -703,6 +741,7 @@
       ],
       "folder": "Grid Lines",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -721,6 +760,7 @@
       ],
       "folder": "Hero",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "layout",
         "grading": false,
@@ -739,6 +779,7 @@
       ],
       "folder": "HSV Fade",
       "metadata": {
+        "audio": false,
         "author": "nwoeanhinnogaehr",
         "category": "transition",
         "grading": false,
@@ -757,6 +798,7 @@
       ],
       "folder": "Impact Cut",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "transition",
         "grading": false,
@@ -775,6 +817,7 @@
       ],
       "folder": "Infrared",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -793,6 +836,7 @@
       ],
       "folder": "Kaleidoscope",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -811,6 +855,7 @@
       ],
       "folder": "Kevlar",
       "metadata": {
+        "audio": false,
         "author": "Giorgi Azmaipharashvili",
         "category": "generator",
         "grading": false,
@@ -829,6 +874,7 @@
       ],
       "folder": "Liquid Displacement",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "transition",
         "grading": false,
@@ -847,6 +893,7 @@
       ],
       "folder": "Lost Signal",
       "metadata": {
+        "audio": false,
         "author": "mernking (GitLab: Godswork)",
         "category": "transition",
         "grading": false,
@@ -865,6 +912,7 @@
       ],
       "folder": "Luma Wipe",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "transition",
         "grading": false,
@@ -883,6 +931,7 @@
       ],
       "folder": "Mesh",
       "metadata": {
+        "audio": false,
         "author": "Paper Design",
         "category": "generator",
         "grading": false,
@@ -901,6 +950,7 @@
       ],
       "folder": "Metaballs",
       "metadata": {
+        "audio": false,
         "author": "Paper Design",
         "category": "generator",
         "grading": false,
@@ -919,6 +969,7 @@
       ],
       "folder": "Mosaic",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -937,6 +988,7 @@
       ],
       "folder": "Neon",
       "metadata": {
+        "audio": false,
         "author": "Paul Bakaus",
         "category": "generator",
         "grading": false,
@@ -955,6 +1007,7 @@
       ],
       "folder": "Neuro",
       "metadata": {
+        "audio": false,
         "author": "Paper Design",
         "category": "generator",
         "grading": false,
@@ -973,6 +1026,7 @@
       ],
       "folder": "Noise",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -991,6 +1045,7 @@
       ],
       "folder": "Open-Close",
       "metadata": {
+        "audio": false,
         "author": "martiniti",
         "category": "transition",
         "grading": false,
@@ -1009,13 +1064,14 @@
       ],
       "folder": "Oscilloscope",
       "metadata": {
+        "audio": true,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
         "id": "B5011CDE-D748-4F56-A46A-BF2808CF890C",
         "name": "Oscilloscope",
         "preview": "preview.jpg",
-        "version": 1
+        "version": 2
       },
       "uuid": "B5011CDE-D748-4F56-A46A-BF2808CF890C"
     },
@@ -1027,6 +1083,7 @@
       ],
       "folder": "Paint Mixer",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -1045,6 +1102,7 @@
       ],
       "folder": "Paper",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -1063,6 +1121,7 @@
       ],
       "folder": "Parametric Glitch",
       "metadata": {
+        "audio": false,
         "author": "Yoni Maltsman (@friendlyspinach)",
         "category": "transition",
         "grading": false,
@@ -1082,6 +1141,7 @@
       ],
       "folder": "Particle Trails",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -1100,13 +1160,14 @@
       ],
       "folder": "Particles",
       "metadata": {
+        "audio": true,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
         "id": "72F59F65-7924-48C5-94A2-DCE6BB841BCC",
         "name": "Particles",
         "preview": "preview.jpg",
-        "version": 1
+        "version": 2
       },
       "uuid": "72F59F65-7924-48C5-94A2-DCE6BB841BCC"
     },
@@ -1118,6 +1179,7 @@
       ],
       "folder": "Perlin",
       "metadata": {
+        "audio": false,
         "author": "Rich Harris",
         "category": "transition",
         "grading": false,
@@ -1136,6 +1198,7 @@
       ],
       "folder": "Poison",
       "metadata": {
+        "audio": false,
         "author": "Paper Design",
         "category": "generator",
         "grading": false,
@@ -1154,6 +1217,7 @@
       ],
       "folder": "Premonition",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -1172,6 +1236,7 @@
       ],
       "folder": "Print Halftone",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -1190,6 +1255,7 @@
       ],
       "folder": "Prism",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -1208,6 +1274,7 @@
       ],
       "folder": "Prisma",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -1226,6 +1293,7 @@
       ],
       "folder": "Pump",
       "metadata": {
+        "audio": true,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -1244,6 +1312,7 @@
       ],
       "folder": "Qualifier",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": true,
@@ -1262,6 +1331,7 @@
       ],
       "folder": "Radial",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "layout",
         "grading": false,
@@ -1280,6 +1350,7 @@
       ],
       "folder": "Ranges",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": true,
@@ -1298,6 +1369,7 @@
       ],
       "folder": "Revolve",
       "metadata": {
+        "audio": false,
         "author": "bread",
         "category": "transition",
         "grading": false,
@@ -1316,6 +1388,7 @@
       ],
       "folder": "Ribbons",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "generator",
         "grading": false,
@@ -1334,6 +1407,7 @@
       ],
       "folder": "Ripple",
       "metadata": {
+        "audio": true,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -1352,6 +1426,7 @@
       ],
       "folder": "Rotate",
       "metadata": {
+        "audio": false,
         "author": "chenkai",
         "category": "transition",
         "grading": false,
@@ -1370,6 +1445,7 @@
       ],
       "folder": "Sand",
       "metadata": {
+        "audio": false,
         "author": "Paper Design",
         "category": "generator",
         "grading": false,
@@ -1388,6 +1464,7 @@
       ],
       "folder": "Scrolling",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "layout",
         "grading": false,
@@ -1409,6 +1486,7 @@
       ],
       "folder": "Selective",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": true,
@@ -1427,6 +1505,7 @@
       ],
       "folder": "Shape Wipe",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "transition",
         "grading": false,
@@ -1445,6 +1524,7 @@
       ],
       "folder": "Sharpen",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -1463,6 +1543,7 @@
       ],
       "folder": "Silk",
       "metadata": {
+        "audio": false,
         "author": "Paul Bakaus",
         "category": "generator",
         "grading": false,
@@ -1481,6 +1562,7 @@
       ],
       "folder": "Simplex Noise",
       "metadata": {
+        "audio": false,
         "author": "Paper Design",
         "category": "generator",
         "grading": false,
@@ -1499,6 +1581,7 @@
       ],
       "folder": "Split",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "layout",
         "grading": false,
@@ -1517,6 +1600,7 @@
       ],
       "folder": "Strata",
       "metadata": {
+        "audio": false,
         "author": "Paul Bakaus",
         "category": "generator",
         "grading": false,
@@ -1535,6 +1619,7 @@
       ],
       "folder": "Tone",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": true,
@@ -1553,6 +1638,7 @@
       ],
       "folder": "Triple Split",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "layout",
         "grading": false,
@@ -1571,6 +1657,7 @@
       ],
       "folder": "Vignette",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "filter",
         "grading": false,
@@ -1589,6 +1676,7 @@
       ],
       "folder": "Whip Pan",
       "metadata": {
+        "audio": false,
         "author": "overpolish",
         "category": "transition",
         "grading": false,
@@ -1607,6 +1695,7 @@
       ],
       "folder": "Zoom In-Out",
       "metadata": {
+        "audio": false,
         "author": "Tianshuo",
         "category": "transition",
         "grading": false,

@@ -21,6 +21,9 @@ MANIFEST_NAME = "index.json"
 COLOR_SURFACE_DIRECTIVE = re.compile(
     r"^\s*//\s*#color-surface(?:\s|$)", re.MULTILINE
 )
+AUDIO_DIRECTIVE = re.compile(
+    r"^\s*//\s*#audio(?:\s|$)", re.MULTILINE
+)
 
 
 def shader_is_grading_tool(entry_dir: str, metadata: dict) -> bool:
@@ -31,6 +34,16 @@ def shader_is_grading_tool(entry_dir: str, metadata: dict) -> bool:
     try:
         with open(image_path, "r", encoding="utf-8") as f:
             return COLOR_SURFACE_DIRECTIVE.search(f.read()) is not None
+    except OSError:
+        return False
+
+
+def shader_is_audio_reactive(entry_dir: str) -> bool:
+    """Whether a shader reacts to the clip's audio (declares `// #audio`)."""
+    image_path = os.path.join(entry_dir, "image.glsl")
+    try:
+        with open(image_path, "r", encoding="utf-8") as f:
+            return AUDIO_DIRECTIVE.search(f.read()) is not None
     except OSError:
         return False
 
@@ -69,6 +82,7 @@ def build_entry(catalog: str, uuid: str):
     # the Colour filter is correct before image.glsl exists locally.
     if catalog == "Shaders":
         metadata["grading"] = shader_is_grading_tool(entry_dir, metadata)
+        metadata["audio"] = shader_is_audio_reactive(entry_dir)
 
     files = sorted(
         f for f in os.listdir(entry_dir) if os.path.isfile(os.path.join(entry_dir, f))
