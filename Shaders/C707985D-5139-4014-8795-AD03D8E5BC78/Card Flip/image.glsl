@@ -5,7 +5,10 @@
 
 // #motionblur on
 
-// #color label="Background" default="#08080C"
+// #choice label="Background" group={"Colors", "paintpalette"} options="Transparent,Colour" default=1
+uniform int uBackgroundMode;
+
+// #color label="Background Colour" default="#08080C"
 uniform vec4 uBackground;
 
 // #choice label="Axis" group={"Card", "cube"} options="Left / Right,Up / Down" default=0
@@ -127,7 +130,8 @@ vec4 cardFrame(vec2 uv, float angle, int channel, out float mask)
 vec4 compositeCard(vec4 card, float mask)
 {
 	float cardAlpha = card.a * mask;
-	float backgroundAlpha = iTransitionMode == 0 ? uBackground.a : 0.0;
+	float backgroundAlpha =
+	    iTransitionMode == 0 && uBackgroundMode == 1 ? uBackground.a : 0.0;
 	float outputAlpha = cardAlpha + backgroundAlpha * (1.0 - cardAlpha);
 	vec3 premultiplied = card.rgb * cardAlpha + uBackground.rgb * backgroundAlpha * (1.0 - cardAlpha);
 	vec3 outputColor = outputAlpha > 0.0001 ? premultiplied / outputAlpha : vec3(0.0);
